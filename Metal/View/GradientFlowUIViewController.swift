@@ -4,34 +4,32 @@
 //
 //  Created by Chatsopon Deepateep on 22/3/23.
 //
+// swiftlint:disable implicitly_unwrapped_optional
 
 import Foundation
 import SwiftUI
 import Anchorage
+import MetalKit
 
 class GradientFlowUIViewController: UIViewController {
-  // swiftlint:disable:next implicitly_unwrapped_optional
-  private var gradientFlowView: GradientFlowView!
-  // swiftlint:disable:next implicitly_unwrapped_optional
-  private var hostingController: UIHostingController<GradientFlowView>!
+  private var metalKitView: MTKView!
+  private var gradientFlowRenderer: GradientFlowRenderer!
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    guard let device = MTLCreateSystemDefaultDevice() else {
+      fatalError("Failed to create device")
+    }
+    self.metalKitView = MTKView(frame: .zero, device: device)
+    self.gradientFlowRenderer = GradientFlowRenderer(metalKitView: metalKitView)
+    metalKitView.delegate = gradientFlowRenderer
+    metalKitView.preferredFramesPerSecond = 60
+    metalKitView.framebufferOnly = false
+    metalKitView.enableSetNeedsDisplay = false
+    metalKitView.clearColor = MTLClearColorMake(0.0, 0.0, 0.0, 1.0)
+    metalKitView.drawableSize = metalKitView.bounds.size
 
-    gradientFlowView = GradientFlowView()
-    hostingController = UIHostingController(rootView: gradientFlowView)
-
-    // Add the hosting controller as a child view controller
-    addChild(hostingController)
-    view.addSubview(hostingController.view)
-
-    // Configure the hosting controller's view using Anchorage
-    hostingController.view.edgeAnchors == view.edgeAnchors
-    hostingController.view.widthAnchor == view.widthAnchor
-    hostingController.view.heightAnchor == view.heightAnchor
-
-
-    // Call didMove(toParent:) on the hosting controller
-    hostingController.didMove(toParent: self)
+    self.view.addSubview(metalKitView)
+    self.metalKitView.edgeAnchors == self.view.edgeAnchors
   }
 }
