@@ -64,10 +64,10 @@ class GradientFlowRenderer: NSObject, MTKViewDelegate {
       length: vertexData.count * MemoryLayout<Float>.stride)
     vertexBuffer.label = "Vertices"
 
-    var color1 = SIMD4<Float>(1, 0, 0, 1)
-    var color2 = SIMD4<Float>(0, 1, 0, 1)
-    var color3 = SIMD4<Float>(0, 0, 1, 1)
-    var color4 = SIMD4<Float>(1, 1, 0, 1)
+    var color1 = SIMD4<Float>(0.370, 0.710, 0.900, 1)
+    var color2 = SIMD4<Float>(1.000, 0.934, 0.500, 1)
+    var color3 = SIMD4<Float>(0.878, 0.651, 0.855, 1)
+    var color4 = SIMD4<Float>(1, 1, 1, 1)
 
     let colorBufferSize = MemoryLayout<SIMD4<Float>>.stride
     colorBuffers = [
