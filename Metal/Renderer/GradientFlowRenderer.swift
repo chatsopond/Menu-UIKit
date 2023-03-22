@@ -4,15 +4,16 @@
 //
 //  Created by Chatsopon Deepateep on 22/3/23.
 //
+// swiftlint:disable comma implicitly_unwrapped_optional force_unwrapping
 
 import MetalKit
 
 class GradientFlowRenderer: NSObject, MTKViewDelegate {
   private let vertexData: [Float] = [
     -1,  1, 0, 1,
-     1,  1, 0, 1,
+    1,  1, 0, 1,
     -1, -1, 0, 1,
-     1, -1, 0, 1
+    1, -1, 0, 1
   ]
 
   private var device: MTLDevice!
@@ -86,9 +87,9 @@ class GradientFlowRenderer: NSObject, MTKViewDelegate {
 
   func draw(in view: MTKView) {
     guard let drawable = view.currentDrawable,
-          let renderPassDescriptor = view.currentRenderPassDescriptor,
-          let commandBuffer = commandQueue.makeCommandBuffer(),
-          let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) else {
+      let renderPassDescriptor = view.currentRenderPassDescriptor,
+      let commandBuffer = commandQueue.makeCommandBuffer(),
+      let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) else {
       return
     }
 
@@ -113,5 +114,10 @@ class GradientFlowRenderer: NSObject, MTKViewDelegate {
     renderEncoder.endEncoding()
     commandBuffer.present(drawable)
     commandBuffer.commit()
+
+    // To optimize energy consumption,
+    // setting the preferredFramesPerSecond to a lower value
+    // like 1 is recommended since this view updates slowly.
+    view.preferredFramesPerSecond = 1
   }
 }

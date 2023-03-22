@@ -10,24 +10,28 @@ import SwiftUI
 import Anchorage
 
 class GradientFlowUIViewController: UIViewController {
-    private var gradientFlowView: GradientFlowView!
-    private var hostingController: UIHostingController<GradientFlowView>!
+  // swiftlint:disable:next implicitly_unwrapped_optional
+  private var gradientFlowView: GradientFlowView!
+  // swiftlint:disable:next implicitly_unwrapped_optional
+  private var hostingController: UIHostingController<GradientFlowView>!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        gradientFlowView = GradientFlowView()
-        hostingController = UIHostingController(rootView: gradientFlowView)
+    gradientFlowView = GradientFlowView()
+    hostingController = UIHostingController(rootView: gradientFlowView)
 
-        // Add the hosting controller as a child view controller
-        addChild(hostingController)
-        view.addSubview(hostingController.view)
+    // Add the hosting controller as a child view controller
+    addChild(hostingController)
+    view.addSubview(hostingController.view)
 
-        // Configure the hosting controller's view using Anchorage
-        hostingController.view.edgeAnchors == view.edgeAnchors
+    // Configure the hosting controller's view using Anchorage
+    hostingController.view.edgeAnchors == view.edgeAnchors
+    hostingController.view.widthAnchor == view.widthAnchor
+    hostingController.view.heightAnchor == view.heightAnchor
 
-        // Call didMove(toParent:) on the hosting controller
-        hostingController.didMove(toParent: self)
-    }
+
+    // Call didMove(toParent:) on the hosting controller
+    hostingController.didMove(toParent: self)
+  }
 }
-

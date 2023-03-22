@@ -4,6 +4,7 @@
 //
 //  Created by Chatsopon Deepateep on 22/3/23.
 //
+// swiftlint:disable all
 
 import UIKit
 import simd

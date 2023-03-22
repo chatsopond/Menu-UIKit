@@ -35,7 +35,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
   }
 
   private func setupConstraints() {
-
     backgroundImage.horizontalAnchors == contentView.horizontalAnchors
     backgroundImage.verticalAnchors == contentView.verticalAnchors
 
@@ -71,4 +70,3 @@ class ItemCollectionViewCell: UICollectionViewCell {
     self.itemImage.image = weaponImage
   }
 }
-

@@ -4,12 +4,12 @@
 //
 //  Created by Chatsopon Deepateep on 22/3/23.
 //
+// swiftlint:disable: force_cast
 
 import UIKit
 import Anchorage
 
 class InventoryViewController: UIViewController {
-
   private let inventoryCollectionView = InventoryCollectionView()
 
   override func viewDidLoad() {
@@ -36,7 +36,9 @@ extension InventoryViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
+    let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier,
+      for: indexPath) as! ItemCollectionViewCell
     // Configure the cell here
     return cell
   }
