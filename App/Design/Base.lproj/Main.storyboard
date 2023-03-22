@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYWenHei.ttf">
+            <string>HYWenHei-HEW</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Menu_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="04T-LB-0PB">
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xsi-pd-8a3">
+                                    <size key="itemSize" width="112" height="136"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCollectionViewCell" id="M0S-7Z-831">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wRS-5g-WIW">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Quality_5_background" translatesAutoresizingMaskIntoConstraints="NO" id="hCs-FC-1oV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weapon/Mistsplitter Reforged" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-i0-kgD">
+                                                    <rect key="frame" x="-70" y="0.0" width="182" height="234"/>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                                </imageView>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faR-4G-PTU">
+                                                    <rect key="frame" x="0.0" y="112" width="112" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv. 50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPB-ba-hlc">
+                                                            <rect key="frame" x="29.666666666666671" y="3" width="53" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="17"/>
+                                                            <color key="textColor" red="0.28649741410000001" green="0.32537525890000002" blue="0.38432306049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.90972536800000003" green="0.89809042220000002" blue="0.86666125059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="gPB-ba-hlc" secondAttribute="bottom" id="Vq1-ZU-A6e"/>
+                                                        <constraint firstAttribute="height" constant="24" id="ny0-dD-fMV"/>
+                                                        <constraint firstItem="gPB-ba-hlc" firstAttribute="centerX" secondItem="faR-4G-PTU" secondAttribute="centerX" id="yky-mO-BAR"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hCs-FC-1oV" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" id="5QH-mt-AQG"/>
+                                                <constraint firstAttribute="bottom" secondItem="HGk-i0-kgD" secondAttribute="bottom" constant="-98" id="EKe-Cw-CL0"/>
+                                                <constraint firstAttribute="trailing" secondItem="faR-4G-PTU" secondAttribute="trailing" id="KeU-Yy-7YC"/>
+                                                <constraint firstItem="HGk-i0-kgD" firstAttribute="top" secondItem="wRS-5g-WIW" secondAttribute="top" id="MA2-kM-M8v"/>
+                                                <constraint firstAttribute="trailing" secondItem="HGk-i0-kgD" secondAttribute="trailing" id="PVD-3Y-upi"/>
+                                                <constraint firstItem="hCs-FC-1oV" firstAttribute="top" secondItem="wRS-5g-WIW" secondAttribute="top" id="V3d-zk-8MA"/>
+                                                <constraint firstAttribute="bottom" secondItem="hCs-FC-1oV" secondAttribute="bottom" id="bEG-kB-pIO"/>
+                                                <constraint firstItem="faR-4G-PTU" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" id="dT8-2a-dwd"/>
+                                                <constraint firstAttribute="trailing" secondItem="hCs-FC-1oV" secondAttribute="trailing" id="f1I-we-R50"/>
+                                                <constraint firstAttribute="bottom" secondItem="faR-4G-PTU" secondAttribute="bottom" id="gra-eP-cXd"/>
+                                                <constraint firstItem="HGk-i0-kgD" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" constant="-70" id="u0C-Zf-xSN"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="04T-LB-0PB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7jU-yd-jgl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04T-LB-0PB" secondAttribute="trailing" constant="16" id="9Ve-Xg-zm9"/>
+                            <constraint firstItem="04T-LB-0PB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U7e-sb-Ljr"/>
+                            <constraint firstAttribute="bottom" secondItem="04T-LB-0PB" secondAttribute="bottom" id="z73-kY-Ofb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6.8702290076335872" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background/Quality_5_background" width="112" height="136"/>
+        <image name="Weapon/Mistsplitter Reforged" width="600" height="600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

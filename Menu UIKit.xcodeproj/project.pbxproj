@@ -13,6 +13,16 @@
 		6B2CAACF29CB168D00769542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAACD29CB168D00769542 /* Main.storyboard */; };
 		6B2CAAD129CB168E00769542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAAD029CB168E00769542 /* Assets.xcassets */; };
 		6B2CAAD429CB168E00769542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAAD229CB168E00769542 /* LaunchScreen.storyboard */; };
+		6B2CAADE29CB1E1300769542 /* HYWenHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAADD29CB1E1300769542 /* HYWenHei.ttf */; };
+		6B2CAAE129CB203C00769542 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAE029CB203C00769542 /* ItemCollectionViewCell.swift */; };
+		6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */; };
+		6B2CAAE629CB22B000769542 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B2CAAE529CB22B000769542 /* Anchorage */; };
+		6B2CAAE929CB257900769542 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAE829CB257900769542 /* InventoryViewController.swift */; };
+		6B2CAAEC29CB410300769542 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAEB29CB410300769542 /* shader.metal */; };
+		6B2CAAF029CB4AAA00769542 /* GradientFlowRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAEF29CB4AAA00769542 /* GradientFlowRenderer.swift */; };
+		6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAF129CB4ADA00769542 /* UIColor+toFloat4.swift */; };
+		6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAF529CB500600769542 /* GradientFlowView.swift */; };
+		6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAF729CB50F600769542 /* GradientFlowUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,15 @@
 		6B2CAAD029CB168E00769542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B2CAAD329CB168E00769542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B2CAAD529CB168E00769542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B2CAADD29CB1E1300769542 /* HYWenHei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYWenHei.ttf; sourceTree = "<group>"; };
+		6B2CAAE029CB203C00769542 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionView.swift; sourceTree = "<group>"; };
+		6B2CAAE829CB257900769542 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		6B2CAAEB29CB410300769542 /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		6B2CAAEF29CB4AAA00769542 /* GradientFlowRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowRenderer.swift; sourceTree = "<group>"; };
+		6B2CAAF129CB4ADA00769542 /* UIColor+toFloat4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+toFloat4.swift"; sourceTree = "<group>"; };
+		6B2CAAF529CB500600769542 /* GradientFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowView.swift; sourceTree = "<group>"; };
+		6B2CAAF729CB50F600769542 /* GradientFlowUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2CAAE629CB22B000769542 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +60,11 @@
 		6B2CAABB29CB168D00769542 = {
 			isa = PBXGroup;
 			children = (
-				6B2CAAC629CB168D00769542 /* Menu UIKit */,
+				6B2CAAC629CB168D00769542 /* App */,
+				6B2CAAED29CB4A8D00769542 /* Extension */,
+				6B2CAAEA29CB40F500769542 /* Metal */,
+				6B2CAAE729CB252A00769542 /* View Controller */,
+				6B2CAADF29CB201000769542 /* View */,
 				6B2CAAC529CB168D00769542 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +77,95 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B2CAAC629CB168D00769542 /* Menu UIKit */ = {
+		6B2CAAC629CB168D00769542 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				6B2CAAC729CB168D00769542 /* AppDelegate.swift */,
 				6B2CAAC929CB168D00769542 /* SceneDelegate.swift */,
 				6B2CAACB29CB168D00769542 /* ViewController.swift */,
+				6B2CAADB29CB1DF500769542 /* Design */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6B2CAADB29CB1DF500769542 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAD529CB168E00769542 /* Info.plist */,
+				6B2CAADC29CB1E0400769542 /* Font */,
 				6B2CAACD29CB168D00769542 /* Main.storyboard */,
 				6B2CAAD029CB168E00769542 /* Assets.xcassets */,
 				6B2CAAD229CB168E00769542 /* LaunchScreen.storyboard */,
-				6B2CAAD529CB168E00769542 /* Info.plist */,
 			);
-			path = "Menu UIKit";
+			path = Design;
+			sourceTree = "<group>";
+		};
+		6B2CAADC29CB1E0400769542 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAADD29CB1E1300769542 /* HYWenHei.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		6B2CAADF29CB201000769542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */,
+				6B2CAAE029CB203C00769542 /* ItemCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B2CAAE729CB252A00769542 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAE829CB257900769542 /* InventoryViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		6B2CAAEA29CB40F500769542 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAF429CB4FA400769542 /* View */,
+				6B2CAAEE29CB4AA000769542 /* Renderer */,
+				6B2CAAF329CB4C2B00769542 /* Shader */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		6B2CAAED29CB4A8D00769542 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAF129CB4ADA00769542 /* UIColor+toFloat4.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6B2CAAEE29CB4AA000769542 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAEF29CB4AAA00769542 /* GradientFlowRenderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		6B2CAAF329CB4C2B00769542 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAEB29CB410300769542 /* shader.metal */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		6B2CAAF429CB4FA400769542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAAF529CB500600769542 /* GradientFlowView.swift */,
+				6B2CAAF729CB50F600769542 /* GradientFlowUIViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +184,9 @@
 			dependencies = (
 			);
 			name = "Menu UIKit";
+			packageProductDependencies = (
+				6B2CAAE529CB22B000769542 /* Anchorage */,
+			);
 			productName = "Menu UIKit";
 			productReference = 6B2CAAC429CB168D00769542 /* Menu UIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +215,9 @@
 				Base,
 			);
 			mainGroup = 6B2CAABB29CB168D00769542;
+			packageReferences = (
+				6B2CAAE429CB22B000769542 /* XCRemoteSwiftPackageReference "Anchorage" */,
+			);
 			productRefGroup = 6B2CAAC529CB168D00769542 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B2CAAD429CB168E00769542 /* LaunchScreen.storyboard in Resources */,
+				6B2CAADE29CB1E1300769542 /* HYWenHei.ttf in Resources */,
 				6B2CAAD129CB168E00769542 /* Assets.xcassets in Resources */,
 				6B2CAACF29CB168D00769542 /* Main.storyboard in Resources */,
 			);
@@ -139,8 +247,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B2CAACC29CB168D00769542 /* ViewController.swift in Sources */,
+				6B2CAAE929CB257900769542 /* InventoryViewController.swift in Sources */,
+				6B2CAAE129CB203C00769542 /* ItemCollectionViewCell.swift in Sources */,
+				6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */,
 				6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */,
+				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
+				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
+				6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */,
+				6B2CAAF029CB4AAA00769542 /* GradientFlowRenderer.swift in Sources */,
+				6B2CAAEC29CB410300769542 /* shader.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HB4FTR388G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Menu UIKit/Info.plist";
+				INFOPLIST_FILE = App/Design/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +433,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HB4FTR388G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Menu UIKit/Info.plist";
+				INFOPLIST_FILE = App/Design/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B2CAAE429CB22B000769542 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B2CAAE529CB22B000769542 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B2CAAE429CB22B000769542 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6B2CAABC29CB168D00769542 /* Project object */;
 }
