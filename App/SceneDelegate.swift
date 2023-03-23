@@ -16,8 +16,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let windowScene = (scene as? UIWindowScene) else { return }
+    // Create an inventory with some sample inventory items
+    let inventory = Inventory(
+      inventoryItems: [
+        .init(item: FoodItemCatalog.apple, amount: 104),
+        .init(item: FoodItemCatalog.sunsettia, amount: 6),
+        .init(item: FoodItemCatalog.dangoMilk, amount: 12)
+      ])
     let navigationController = GradientFlowUINavigationController()
-    inventoryCoordinator = InventoryCoordinator(navigationController: navigationController)
+    inventoryCoordinator = InventoryCoordinator(navigationController: navigationController, inventory: inventory)
     inventoryCoordinator?.start()
 
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
