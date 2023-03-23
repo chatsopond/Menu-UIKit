@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -39,34 +40,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Quality_5_background" translatesAutoresizingMaskIntoConstraints="NO" id="hCs-FC-1oV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Quality_1_background" translatesAutoresizingMaskIntoConstraints="NO" id="hCs-FC-1oV">
                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weapon/Mistsplitter Reforged" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-i0-kgD">
-                                                    <rect key="frame" x="-70" y="0.0" width="182" height="234"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item/apple" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-i0-kgD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="114"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 </imageView>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faR-4G-PTU">
                                                     <rect key="frame" x="0.0" y="112" width="112" height="24"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv. 50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPB-ba-hlc">
-                                                            <rect key="frame" x="29.666666666666671" y="3" width="53" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPB-ba-hlc">
+                                                            <rect key="frame" x="52.666666666666664" y="5" width="7" height="14"/>
                                                             <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="17"/>
-                                                            <color key="textColor" red="0.28649741410000001" green="0.32537525890000002" blue="0.38432306049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="textColor" name="Color/Label"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.90972536800000003" green="0.89809042220000002" blue="0.86666125059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" name="Color/Background Label"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="gPB-ba-hlc" secondAttribute="bottom" id="Vq1-ZU-A6e"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gPB-ba-hlc" secondAttribute="bottom" constant="5" id="Vq1-ZU-A6e"/>
                                                         <constraint firstAttribute="height" constant="24" id="ny0-dD-fMV"/>
+                                                        <constraint firstItem="gPB-ba-hlc" firstAttribute="top" secondItem="faR-4G-PTU" secondAttribute="top" constant="5" id="r5k-o7-L8z"/>
                                                         <constraint firstItem="gPB-ba-hlc" firstAttribute="centerX" secondItem="faR-4G-PTU" secondAttribute="centerX" id="yky-mO-BAR"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hCs-FC-1oV" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" id="5QH-mt-AQG"/>
-                                                <constraint firstAttribute="bottom" secondItem="HGk-i0-kgD" secondAttribute="bottom" constant="-98" id="EKe-Cw-CL0"/>
+                                                <constraint firstAttribute="bottom" secondItem="HGk-i0-kgD" secondAttribute="bottom" constant="22" id="EKe-Cw-CL0"/>
                                                 <constraint firstAttribute="trailing" secondItem="faR-4G-PTU" secondAttribute="trailing" id="KeU-Yy-7YC"/>
                                                 <constraint firstItem="HGk-i0-kgD" firstAttribute="top" secondItem="wRS-5g-WIW" secondAttribute="top" id="MA2-kM-M8v"/>
                                                 <constraint firstAttribute="trailing" secondItem="HGk-i0-kgD" secondAttribute="trailing" id="PVD-3Y-upi"/>
@@ -75,7 +77,7 @@
                                                 <constraint firstItem="faR-4G-PTU" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" id="dT8-2a-dwd"/>
                                                 <constraint firstAttribute="trailing" secondItem="hCs-FC-1oV" secondAttribute="trailing" id="f1I-we-R50"/>
                                                 <constraint firstAttribute="bottom" secondItem="faR-4G-PTU" secondAttribute="bottom" id="gra-eP-cXd"/>
-                                                <constraint firstItem="HGk-i0-kgD" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" constant="-70" id="u0C-Zf-xSN"/>
+                                                <constraint firstItem="HGk-i0-kgD" firstAttribute="leading" secondItem="wRS-5g-WIW" secondAttribute="leading" id="u0C-Zf-xSN"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -101,8 +103,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background/Quality_5_background" width="112" height="136"/>
-        <image name="Weapon/Mistsplitter Reforged" width="600" height="600"/>
+        <image name="Background/Quality_1_background" width="112" height="136"/>
+        <image name="Item/apple" width="256" height="256"/>
+        <namedColor name="Color/Background Label">
+            <color red="0.90972536800000003" green="0.89809042220000002" blue="0.86666125059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Color/Label">
+            <color red="0.28649741410000001" green="0.32537525890000002" blue="0.38432306049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

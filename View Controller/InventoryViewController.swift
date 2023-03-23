@@ -11,6 +11,7 @@ import Anchorage
 
 class InventoryViewController: UIViewController {
   private let inventoryCollectionView = InventoryCollectionView()
+  private let gradientFlowViewController = GradientFlowUIViewController()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,13 +19,19 @@ class InventoryViewController: UIViewController {
   }
 
   private func setupViews() {
-    view.backgroundColor = .white
     view.addSubview(inventoryCollectionView)
     inventoryCollectionView.dataSource = self
     inventoryCollectionView.delegate = self
 
+    // Add gradientFlowViewController's view as a subview
+    view.addSubview(gradientFlowViewController.view)
+
     // Set up constraints using Anchorage
     inventoryCollectionView.edgeAnchors == view.safeAreaLayoutGuide.edgeAnchors
+    inventoryCollectionView.edgeAnchors == view.safeAreaLayoutGuide.edgeAnchors
+
+    // Bring gradientFlowViewController's view to the back
+    view.sendSubviewToBack(gradientFlowViewController.view)
   }
 }
 
@@ -39,6 +46,7 @@ extension InventoryViewController: UICollectionViewDataSource {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier,
       for: indexPath) as! ItemCollectionViewCell
+    cell.inventoryItem = InventoryItem(item: AppleItem(), amount: 1)
     // Configure the cell here
     return cell
   }
@@ -48,6 +56,6 @@ extension InventoryViewController: UICollectionViewDataSource {
 
 extension InventoryViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.bounds.width / 2 - 10, height: collectionView.bounds.width / 2 - 10)
+    return CGSize(width: 112, height: 136)
   }
 }

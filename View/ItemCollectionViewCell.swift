@@ -4,6 +4,7 @@
 //
 //  Created by Chatsopon Deepateep on 22/3/23.
 //
+// swiftlint:disable force_unwrapping
 
 import UIKit
 import Anchorage
@@ -11,10 +12,17 @@ import Anchorage
 class ItemCollectionViewCell: UICollectionViewCell {
   static let reuseIdentifier = "ItemCollectionViewCell"
 
+  var inventoryItem: InventoryItem? {
+    didSet {
+      styleViews()
+    }
+  }
+  var item: (any Item)? { inventoryItem?.item }
+
   private let backgroundImage = UIImageView()
   private let itemImage = UIImageView()
   private let itemLabelBackground = UIView()
-  private let levelLabel = UILabel()
+  private let itemLabel = UILabel()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -31,38 +39,44 @@ class ItemCollectionViewCell: UICollectionViewCell {
     contentView.addSubview(backgroundImage)
     contentView.addSubview(itemImage)
     contentView.addSubview(itemLabelBackground)
-    itemLabelBackground.addSubview(levelLabel)
+    itemLabelBackground.addSubview(itemLabel)
   }
 
   private func setupConstraints() {
     backgroundImage.horizontalAnchors == contentView.horizontalAnchors
     backgroundImage.verticalAnchors == contentView.verticalAnchors
 
-//    backgroundImage.edgeAnchors == contentView.edgeAnchors
-//    itemImage.centerAnchors == contentView.centerAnchors
-//    itemImage.widthAnchor <= contentView.widthAnchor * 0.8
-//    itemImage.heightAnchor <= contentView.heightAnchor * 0.8
-//
-//    itemLabelBackground.bottomAnchor == contentView.bottomAnchor
-//    itemLabelBackground.leadingAnchor == contentView.leadingAnchor
-//    itemLabelBackground.trailingAnchor == contentView.trailingAnchor
-//    itemLabelBackground.heightAnchor == 32
-//
-//    levelLabel.centerYAnchor == itemLabelBackground.centerYAnchor
-//    levelLabel.leadingAnchor == itemLabelBackground.leadingAnchor + 8
+    itemLabelBackground.horizontalAnchors == contentView.horizontalAnchors
+    itemLabelBackground.bottomAnchor == contentView.bottomAnchor
+    itemLabelBackground.heightAnchor == 24
+
+    itemLabel.horizontalAnchors == itemLabelBackground.horizontalAnchors
+    itemLabel.topAnchor == itemLabelBackground.topAnchor + 5
+    itemLabel.bottomAnchor == itemLabelBackground.bottomAnchor - 5
+
+    itemImage.horizontalAnchors == contentView.horizontalAnchors
+    itemImage.topAnchor == contentView.topAnchor
+    itemImage.bottomAnchor == itemLabelBackground.topAnchor
   }
 
   private func styleViews() {
-    backgroundImage.image = UIImage(named: "Background/Quality_5_background")
+    contentView.clipsToBounds = true
+    contentView.layer.cornerRadius = 10
+
+    backgroundImage.image = item?.backgroundImage ?? UIImage(named: "Background/Quality_1_background")
     backgroundImage.contentMode = .scaleAspectFill
     backgroundImage.clipsToBounds = true
 
-//    itemImage.contentMode = .scaleAspectFit
-//    itemLabelBackground.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-//
-//    levelLabel.text = "Lv. 50"
-//    levelLabel.textColor = .white
-//    levelLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+    itemLabelBackground.backgroundColor = UIColor(named: ("Color/Background Label"))
+    itemLabelBackground.clipsToBounds = true
+
+    let font = UIFont(name: "HYWenHei-HEW", size: 17.0)!
+    itemLabel.text = "\(inventoryItem?.amount ?? 0)"
+    itemLabel.textColor = UIColor(named: "Color/Label")
+    itemLabel.font = font
+    itemLabel.textAlignment = .center
+
+    itemImage.image = UIImage(named: item?.imageName ?? "")
   }
 
   func configure(backgroundImage: UIImage, weaponImage: UIImage) {
