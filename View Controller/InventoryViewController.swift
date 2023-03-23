@@ -9,45 +9,57 @@
 import UIKit
 import Anchorage
 
+/// This class represents a UIViewController used to display an inventory.
 class InventoryViewController: UIViewController {
-  private let inventoryCollectionView = InventoryCollectionView()
-  private let gradientFlowViewController = GradientFlowUIViewController()
+  /// The view used to display the inventory.
+  private let inventoryView: InventoryView
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setupViews()
+  /// The view model used to populate the inventory.
+  private let viewModel: InventoryViewModel
+
+  /// Initializes a new instance of the InventoryViewController class.
+  ///
+  /// - Parameter viewModel: The view model to use.
+  init(viewModel: InventoryViewModel) {
+    self.viewModel = viewModel
+    self.inventoryView = InventoryView()
+    super.init(nibName: nil, bundle: nil)
   }
 
-  private func setupViews() {
-    view.addSubview(inventoryCollectionView)
-    inventoryCollectionView.dataSource = self
-    inventoryCollectionView.delegate = self
+  /// Initializes a new instance of the InventoryViewController class.
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
-    // Add gradientFlowViewController's view as a subview
-    view.addSubview(gradientFlowViewController.view)
-
-    // Set up constraints using Anchorage
-    inventoryCollectionView.edgeAnchors == view.safeAreaLayoutGuide.edgeAnchors
-    inventoryCollectionView.edgeAnchors == view.safeAreaLayoutGuide.edgeAnchors
-
-    // Bring gradientFlowViewController's view to the back
-    view.sendSubviewToBack(gradientFlowViewController.view)
+  /// Called after the controller's view is loaded into memory.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view = inventoryView
+    inventoryView.inventoryCollectionView.dataSource = self
+    inventoryView.inventoryCollectionView.delegate = self
   }
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension InventoryViewController: UICollectionViewDataSource {
+  /// Asks your data source object to provide the number of items in the specified section.
+  /// - Parameter collectionView: The collection view requesting this information.
+  /// - Parameter section: An index number identifying a section in collectionView.
+  /// - Returns: The number of rows in section.
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 1 // Replace with the desired number of items
+    return viewModel.numberOfItems()
   }
 
+  /// Asks your data source object for the cell that corresponds to the specified item in the collection view.
+  /// - Parameter collectionView: The collection view requesting this information.
+  /// - Parameter indexPath: The index path that specifies the location of the item.
+  /// - Returns: A configured cell object. You must not return nil from this method.
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier,
       for: indexPath) as! ItemCollectionViewCell
-    cell.inventoryItem = InventoryItem(item: AppleItem(), amount: 1)
-    // Configure the cell here
+    cell.inventoryItem = viewModel.item(at: indexPath.row)
     return cell
   }
 }
@@ -55,6 +67,11 @@ extension InventoryViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension InventoryViewController: UICollectionViewDelegateFlowLayout {
+  /// Asks the delegate for the size of the specified item’s cell.
+  /// - Parameter collectionView: The collection view object displaying the flow layout.
+  /// - Parameter collectionViewLayout: The layout object requesting the information.
+  /// - Parameter indexPath: The index path of the item.
+  /// - Returns: The width and height of the specified item. Both values must be greater than 0.
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 112, height: 136)
   }

@@ -7,7 +7,10 @@
 
 import Foundation
 
+/// A struct representing an item in an inventory, along with the amount of that item
 struct InventoryItem {
+  /// The item in the inventory, conforming to the `Item` protocol
   var item: any Item
+  /// The amount of the item in the inventory
   var amount: Int
 }

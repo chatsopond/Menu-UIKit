@@ -9,21 +9,36 @@
 import UIKit
 import Anchorage
 
+/// This class represents a custom UICollectionViewCell used to display an InventoryItem.
 class ItemCollectionViewCell: UICollectionViewCell {
+  /// The reusable identifier for the cell.
   static let reuseIdentifier = "ItemCollectionViewCell"
 
+  /// The InventoryItem that the cell displays.
   var inventoryItem: InventoryItem? {
     didSet {
       styleViews()
     }
   }
+
+  /// The item associated with the InventoryItem.
   var item: (any Item)? { inventoryItem?.item }
 
+  /// The background image of the cell.
   private let backgroundImage = UIImageView()
+
+  /// The image of the item.
   private let itemImage = UIImageView()
+
+  /// The background view for the item label.
   private let itemLabelBackground = UIView()
+
+  /// The label displaying the amount of the item.
   private let itemLabel = UILabel()
 
+  /// Initializes a new instance of the ItemCollectionViewCell class.
+  ///
+  /// - Parameter frame: The frame for the cell.
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -31,10 +46,14 @@ class ItemCollectionViewCell: UICollectionViewCell {
     styleViews()
   }
 
+  /// Initializes a new instance of the ItemCollectionViewCell class.
+  ///
+  /// - Parameter coder: The NSCoder used to decode the cell.
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
+  /// Sets up the subviews of the cell.
   private func setupViews() {
     contentView.addSubview(backgroundImage)
     contentView.addSubview(itemImage)
@@ -42,6 +61,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemLabelBackground.addSubview(itemLabel)
   }
 
+  /// Sets up the constraints for the subviews of the cell.
   private func setupConstraints() {
     backgroundImage.horizontalAnchors == contentView.horizontalAnchors
     backgroundImage.verticalAnchors == contentView.verticalAnchors
@@ -59,6 +79,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemImage.bottomAnchor == itemLabelBackground.topAnchor
   }
 
+  /// Styles the subviews of the cell.
   private func styleViews() {
     contentView.clipsToBounds = true
     contentView.layer.cornerRadius = 10
@@ -79,6 +100,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemImage.image = UIImage(named: item?.imageName ?? "")
   }
 
+  /// Configures the cell with the specified background and item images.
+  ///
+  /// - Parameter backgroundImage: The background image to set.
+  /// - Parameter weaponImage: The item image to set.
   func configure(backgroundImage: UIImage, weaponImage: UIImage) {
     self.backgroundImage.image = backgroundImage
     self.itemImage.image = weaponImage

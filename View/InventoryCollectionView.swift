@@ -8,7 +8,9 @@
 import UIKit
 import Anchorage
 
+/// A custom `UICollectionView` subclass for displaying an inventory of items
 class InventoryCollectionView: UICollectionView {
+  /// The layout for the collection view
   private let inventoryLayout: UICollectionViewFlowLayout = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .vertical
@@ -17,19 +19,26 @@ class InventoryCollectionView: UICollectionView {
     return layout
   }()
 
+  /// Initializes a new `InventoryCollectionView` with the default layout
   init() {
     super.init(frame: .zero, collectionViewLayout: inventoryLayout)
     setupViews()
   }
 
+  /// Not implemented
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
+  /// Configures the initial view hierarchy and settings
   private func setupViews() {
-    backgroundColor = .clear
+    // Set the background color to transparent
+    backgroundColor = UIColor(white: 1.0, alpha: 0.01)
+
+    // Always bounce vertically
     alwaysBounceVertical = true
 
+    // Register the cell class for reuse
     register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: ItemCollectionViewCell.reuseIdentifier)
 
     // Set up constraints using Anchorage

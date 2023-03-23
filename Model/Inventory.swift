@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// A struct representing an inventory of items
 struct Inventory {
+  /// An array of `InventoryItem`s in the inventory
   var inventoryItems: [InventoryItem]
 }

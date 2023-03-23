@@ -27,6 +27,11 @@
 		6B2CAAFE29CC549E00769542 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAFD29CC549E00769542 /* Inventory.swift */; };
 		6B2CAB0129CC54C200769542 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0029CC54C200769542 /* Apple.swift */; };
 		6B2CAB0329CC57A600769542 /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0229CC57A600769542 /* InventoryItem.swift */; };
+		6B2CAB0629CC5BD500769542 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0529CC5BD500769542 /* InventoryViewModel.swift */; };
+		6B2CAB0829CC5BFF00769542 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0729CC5BFF00769542 /* InventoryView.swift */; };
+		6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */; };
+		6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */; };
+		6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		6B2CAAFD29CC549E00769542 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		6B2CAB0029CC54C200769542 /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		6B2CAB0229CC57A600769542 /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
+		6B2CAB0529CC5BD500769542 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		6B2CAB0729CC5BFF00769542 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCoordinator.swift; sourceTree = "<group>"; };
+		6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowUINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +79,15 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAAC629CB168D00769542 /* App */,
+				6B2CAB0C29CC5C4400769542 /* Coordinator */,
+				6B2CAB0929CC5C1C00769542 /* Definition */,
 				6B2CAAED29CB4A8D00769542 /* Extension */,
 				6B2CAAEA29CB40F500769542 /* Metal */,
 				6B2CAAFA29CC4E2500769542 /* Model */,
-				6B2CAAE729CB252A00769542 /* View Controller */,
-				6B2CAADF29CB201000769542 /* View */,
 				6B2CAAC529CB168D00769542 /* Products */,
+				6B2CAADF29CB201000769542 /* View */,
+				6B2CAAE729CB252A00769542 /* View Controller */,
+				6B2CAB0429CC5BC400769542 /* View Model */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAAC729CB168D00769542 /* AppDelegate.swift */,
+				6B2CAADB29CB1DF500769542 /* Design */,
 				6B2CAAC929CB168D00769542 /* SceneDelegate.swift */,
 				6B2CAACB29CB168D00769542 /* ViewController.swift */,
-				6B2CAADB29CB1DF500769542 /* Design */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 			children = (
 				6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */,
 				6B2CAAE029CB203C00769542 /* ItemCollectionViewCell.swift */,
+				6B2CAB0729CC5BFF00769542 /* InventoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAAE829CB257900769542 /* InventoryViewController.swift */,
+				6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -194,6 +209,30 @@
 				6B2CAB0029CC54C200769542 /* Apple.swift */,
 			);
 			path = Catalog;
+			sourceTree = "<group>";
+		};
+		6B2CAB0429CC5BC400769542 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAB0529CC5BD500769542 /* InventoryViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		6B2CAB0929CC5C1C00769542 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */,
+			);
+			path = Definition;
+			sourceTree = "<group>";
+		};
+		6B2CAB0C29CC5C4400769542 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,12 +342,17 @@
 				6B2CAAE129CB203C00769542 /* ItemCollectionViewCell.swift in Sources */,
 				6B2CAAFE29CC549E00769542 /* Inventory.swift in Sources */,
 				6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */,
+				6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */,
 				6B2CAAFC29CC541700769542 /* Item.swift in Sources */,
+				6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */,
 				6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */,
 				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
 				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
 				6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */,
+				6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */,
+				6B2CAB0629CC5BD500769542 /* InventoryViewModel.swift in Sources */,
+				6B2CAB0829CC5BFF00769542 /* InventoryView.swift in Sources */,
 				6B2CAAF029CB4AAA00769542 /* GradientFlowRenderer.swift in Sources */,
 				6B2CAAEC29CB410300769542 /* shader.metal in Sources */,
 			);
