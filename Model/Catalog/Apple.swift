@@ -8,10 +8,10 @@
 import Foundation
 
 struct AppleItem: Item {
-  var id: String = "Apple"
-  var imageName: String = "Item/Apple"
-  var title: String = "Apple"
-  var description: String = "Crisp and fragrant. Delicious raw or made into wine."
-  var travelerDescription: String = "Apples are a food item that can be obtained by foraging in the wild."
-  var quality: Int = 1
+  let id = "Apple"
+  let imageName = "Item/Apple"
+  let title = "Apple"
+  let description = "Crisp and fragrant. Delicious raw or made into wine."
+  let travelerDescription = "Apples are a food item that can be obtained by foraging in the wild."
+  let quality = 1
 }

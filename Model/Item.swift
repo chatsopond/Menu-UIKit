@@ -11,15 +11,15 @@ import UIKit
 /// A protocol for items in an inventory
 protocol Item: Identifiable {
   /// The unique identifier of the item
-  var id: String { get set }
+  var id: String { get }
   /// The name of the image file for the item
-  var imageName: String { get set }
+  var imageName: String { get }
   /// The title of the item
-  var title: String { get set }
+  var title: String { get }
   /// The description of the item
-  var description: String { get set }
+  var description: String { get }
   /// The quality of the item (e.g. number of stars)
-  var quality: Int { get set }
+  var quality: Int { get }
 
   /// The background image for the item
   var backgroundImage: UIImage { get }
