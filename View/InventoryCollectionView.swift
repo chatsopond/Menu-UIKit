@@ -16,6 +16,7 @@ class InventoryCollectionView: UICollectionView {
     layout.scrollDirection = .vertical
     layout.minimumLineSpacing = 10
     layout.minimumInteritemSpacing = 10
+    layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     return layout
   }()
 

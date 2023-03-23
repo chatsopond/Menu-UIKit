@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppleItem: Item {
-  let id = "Apple"
+  let id = String(describing: AppleItem.self)
   let imageName = "Item/Apple"
   let title = "Apple"
   let description = "Crisp and fragrant. Delicious raw or made into wine."

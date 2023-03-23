@@ -16,7 +16,12 @@ class InventoryCoordinator: Coordinator {
   }
 
   func start() {
-    let inventory = Inventory(inventoryItems: [InventoryItem(item: AppleItem(), amount: 1)]) // Sample inventory
+    let inventory = Inventory(
+      inventoryItems: [
+        .init(item: FoodItemCatalog.apple, amount: 104),
+        .init(item: FoodItemCatalog.sunsettia, amount: 6),
+        .init(item: FoodItemCatalog.dangoMilk, amount: 12)
+      ])
     let viewModel = InventoryViewModel(inventory: inventory)
     let viewController = InventoryViewController(viewModel: viewModel)
     navigationController?.pushViewController(viewController, animated: true)

@@ -32,6 +32,9 @@
 		6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */; };
 		6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */; };
 		6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */; };
+		6B2CAB1629CC699400769542 /* FoodItemCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */; };
+		6B2CAB1829CC69BF00769542 /* Sunsettia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1729CC69BF00769542 /* Sunsettia.swift */; };
+		6B2CAB1A29CC6ACD00769542 /* DangoMilk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCoordinator.swift; sourceTree = "<group>"; };
 		6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowUINavigationController.swift; sourceTree = "<group>"; };
+		6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCatalog.swift; sourceTree = "<group>"; };
+		6B2CAB1729CC69BF00769542 /* Sunsettia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunsettia.swift; sourceTree = "<group>"; };
+		6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangoMilk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAB0029CC54C200769542 /* Apple.swift */,
+				6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */,
+				6B2CAB1729CC69BF00769542 /* Sunsettia.swift */,
+				6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -341,11 +350,14 @@
 				6B2CAB0129CC54C200769542 /* Apple.swift in Sources */,
 				6B2CAAE129CB203C00769542 /* ItemCollectionViewCell.swift in Sources */,
 				6B2CAAFE29CC549E00769542 /* Inventory.swift in Sources */,
+				6B2CAB1629CC699400769542 /* FoodItemCatalog.swift in Sources */,
 				6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */,
 				6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */,
 				6B2CAAFC29CC541700769542 /* Item.swift in Sources */,
+				6B2CAB1A29CC6ACD00769542 /* DangoMilk.swift in Sources */,
 				6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */,
 				6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */,
+				6B2CAB1829CC69BF00769542 /* Sunsettia.swift in Sources */,
 				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
 				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
