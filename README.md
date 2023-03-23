@@ -18,7 +18,7 @@
 
 ### Architecture
 
-- without Storyboard
+- UIKit without Storyboard
 - The design pattern used in this app is called MVVM (Model-View-ViewModel) with the coordinator pattern.
 
 ## Features
