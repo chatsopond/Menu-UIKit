@@ -52,7 +52,7 @@ This means that users can now easily move items within their inventory by simply
 
 ### Dynamic Resizing Collection View Cells
 
-When a user taps on a cell, the cell smoothly resizes and expands to reveal additional information about the item. The expanded cell then returns to its original size when the user taps on a different cell.
+When a user taps on a cell, the cell smoothly resizes and expands to reveal additional information about the item. The expanded cell then returns to its original size when the user taps on a different cell. It is noticeable that each cell in the collection view is aligned to the top instead of being centered. This means that the cell's origin (i.e., its starting point) is at the top of the cell, rather than at the center. [(See more)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedCollectionViewFlowLayout.swift)
 
 <img width="330px" src="https://user-images.githubusercontent.com/42887325/227534576-6c8b5e81-f1ed-4728-b87c-5617c16d7935.gif"/>
 
