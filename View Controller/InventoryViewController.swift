@@ -84,33 +84,49 @@ extension InventoryViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Drag & Drop
 
 extension InventoryViewController: UICollectionViewDragDelegate, UICollectionViewDropDelegate {
+  /// Prepares one or more drag items with the data for the specified index path.
   func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+    // Get the item at the specified index path
     let item = viewModel.item(at: indexPath.row)
+    // Create an item provider with the item's identifier
     let itemProvider = NSItemProvider(object: item.id as NSString)
+    // Create a drag item with the item provider
     let dragItem = UIDragItem(itemProvider: itemProvider)
+    // Store the local object in the drag item
     dragItem.localObject = item
+    // Return the drag item in an array
     return [dragItem]
   }
 
+  /// Performs the drop operation at the destination index path.
   func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+    // Ensure we have a destination index path
     guard let destinationIndexPath = coordinator.destinationIndexPath else { return }
-    if let item = coordinator.items.first, let sourceIndexPath = item.sourceIndexPath {
-      collectionView.performBatchUpdates({
-        viewModel.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
-        collectionView.moveItem(at: sourceIndexPath, to: destinationIndexPath)
-      }, completion: nil)
-      coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
+    // Get the first item from the coordinator's items and ensure it has a source index path
+    guard let item = coordinator.items.first,
+      let sourceIndexPath = item.sourceIndexPath else { return }
+    // Perform batch updates to move the item within the view model and the collection view
+    collectionView.performBatchUpdates {
+      viewModel.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+      collectionView.moveItem(at: sourceIndexPath, to: destinationIndexPath)
     }
+    // Complete the drop operation
+    coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
   }
 
+  /// Determines if the collection view can handle the drop session.
   func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+    // Return true if the session can load objects of class NSString, false otherwise
     return session.canLoadObjects(ofClass: NSString.self)
   }
 
+  /// Updates the drop proposal based on the destination index path.
   func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+    // If the collection view has an active drag, return a drop proposal with .move operation and .insertAtDestinationIndexPath intent
     if collectionView.hasActiveDrag {
       return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
     }
+    // If the collection view does not have an active drag, return a drop proposal with .forbidden operation
     return UICollectionViewDropProposal(operation: .forbidden)
   }
 }
