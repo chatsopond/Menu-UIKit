@@ -11,7 +11,7 @@
 - [x] Adopt Anchorage
 - UICollectionView
   - [ ] Each item can have a different size.
-  - [ ] Drag and drop
+  - [x] Drag and drop
 - Profiling
   - [ ] CPU
   - [ ] Memory (Leak and zombie)
@@ -39,4 +39,11 @@ var color4 = SIMD4<Float>(1, 1, 1, 1)
 This background is energy efficient because it only needs to be redrawn once per second, 
 and the rendering process is handled by the GPU.
 
-<img width="330px" src="https://user-images.githubusercontent.com/42887325/227199878-c2f3ee87-f565-4f73-a947-9c2e26ae7095.gif"/>
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/227458051-e3d3d7ff-311b-4d7e-b6d9-cac3972cd0ff.gif"/>
+
+### Drag and Drop
+
+I have added the drag and drop functionality to the inventory feature of our application. 
+This means that users can now easily move items within their inventory by simply clicking and dragging them to their desired location. 
+
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/227457888-c3138758-7f3d-4130-a1cd-55109db42725.gif">
