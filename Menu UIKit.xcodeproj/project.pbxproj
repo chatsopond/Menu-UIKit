@@ -34,10 +34,11 @@
 		6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */; };
 		6B2CAB1629CC699400769542 /* FoodItemCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */; };
 		6B2CAB1829CC69BF00769542 /* Sunsettia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1729CC69BF00769542 /* Sunsettia.swift */; };
-		6B2CAB1A29CC6ACD00769542 /* DangoMilk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */; };
-		6B2CAB1C29CD918300769542 /* CrystalShrimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1B29CD918300769542 /* CrystalShrimp.swift */; };
+		6B2CAB1A29CC6ACD00769542 /* Dango Milk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1929CC6ACD00769542 /* Dango Milk.swift */; };
+		6B2CAB1C29CD918300769542 /* Crystal Shrimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1B29CD918300769542 /* Crystal Shrimp.swift */; };
 		6B2CAB1E29CD930200769542 /* Rice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1D29CD930200769542 /* Rice.swift */; };
-		6B2CAB2029CD936500769542 /* ShrimpMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1F29CD936500769542 /* ShrimpMeat.swift */; };
+		6B2CAB2029CD936500769542 /* Shrimp Meat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1F29CD936500769542 /* Shrimp Meat.swift */; };
+		6B2CAB2229CD964800769542 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB2129CD964800769542 /* Carrot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,10 +70,11 @@
 		6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFlowUINavigationController.swift; sourceTree = "<group>"; };
 		6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCatalog.swift; sourceTree = "<group>"; };
 		6B2CAB1729CC69BF00769542 /* Sunsettia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunsettia.swift; sourceTree = "<group>"; };
-		6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangoMilk.swift; sourceTree = "<group>"; };
-		6B2CAB1B29CD918300769542 /* CrystalShrimp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalShrimp.swift; sourceTree = "<group>"; };
+		6B2CAB1929CC6ACD00769542 /* Dango Milk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dango Milk.swift"; sourceTree = "<group>"; };
+		6B2CAB1B29CD918300769542 /* Crystal Shrimp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crystal Shrimp.swift"; sourceTree = "<group>"; };
 		6B2CAB1D29CD930200769542 /* Rice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rice.swift; sourceTree = "<group>"; };
-		6B2CAB1F29CD936500769542 /* ShrimpMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrimpMeat.swift; sourceTree = "<group>"; };
+		6B2CAB1F29CD936500769542 /* Shrimp Meat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shrimp Meat.swift"; sourceTree = "<group>"; };
+		6B2CAB2129CD964800769542 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,12 +221,13 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAB0029CC54C200769542 /* Apple.swift */,
-				6B2CAB1B29CD918300769542 /* CrystalShrimp.swift */,
-				6B2CAB1929CC6ACD00769542 /* DangoMilk.swift */,
+				6B2CAB1B29CD918300769542 /* Crystal Shrimp.swift */,
+				6B2CAB1929CC6ACD00769542 /* Dango Milk.swift */,
 				6B2CAB1529CC699400769542 /* FoodItemCatalog.swift */,
 				6B2CAB1729CC69BF00769542 /* Sunsettia.swift */,
 				6B2CAB1D29CD930200769542 /* Rice.swift */,
-				6B2CAB1F29CD936500769542 /* ShrimpMeat.swift */,
+				6B2CAB1F29CD936500769542 /* Shrimp Meat.swift */,
+				6B2CAB2129CD964800769542 /* Carrot.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -363,18 +366,19 @@
 				6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */,
 				6B2CAB1E29CD930200769542 /* Rice.swift in Sources */,
 				6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */,
+				6B2CAB2229CD964800769542 /* Carrot.swift in Sources */,
 				6B2CAAFC29CC541700769542 /* Item.swift in Sources */,
-				6B2CAB1A29CC6ACD00769542 /* DangoMilk.swift in Sources */,
+				6B2CAB1A29CC6ACD00769542 /* Dango Milk.swift in Sources */,
 				6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */,
 				6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */,
 				6B2CAB1829CC69BF00769542 /* Sunsettia.swift in Sources */,
 				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
-				6B2CAB2029CD936500769542 /* ShrimpMeat.swift in Sources */,
+				6B2CAB2029CD936500769542 /* Shrimp Meat.swift in Sources */,
 				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
 				6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */,
 				6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */,
-				6B2CAB1C29CD918300769542 /* CrystalShrimp.swift in Sources */,
+				6B2CAB1C29CD918300769542 /* Crystal Shrimp.swift in Sources */,
 				6B2CAB0629CC5BD500769542 /* InventoryViewModel.swift in Sources */,
 				6B2CAB0829CC5BFF00769542 /* InventoryView.swift in Sources */,
 				6B2CAAF029CB4AAA00769542 /* GradientFlowRenderer.swift in Sources */,

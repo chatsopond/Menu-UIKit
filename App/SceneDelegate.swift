@@ -19,9 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Create an inventory with some sample inventory items
     let inventory = Inventory(
       inventoryItems: [
-        .init(item: FoodItemCatalog.apple, amount: 104),
-        .init(item: FoodItemCatalog.sunsettia, amount: 6),
-        .init(item: FoodItemCatalog.dangoMilk, amount: 12)
+        .init(item: CrystalShrimpItem(), amount: 2),
+        .init(item: RiceItem(), amount: 12),
+        .init(item: ShrimpMeatItem(), amount: 4),
+        .init(item: CarrotItem(), amount: 2)
       ])
     let navigationController = GradientFlowUINavigationController()
     inventoryCoordinator = InventoryCoordinator(navigationController: navigationController, inventory: inventory)
