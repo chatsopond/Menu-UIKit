@@ -39,7 +39,7 @@ var color4 = SIMD4<Float>(1, 1, 1, 1)
 This background is energy efficient because it only needs to be redrawn once per second, 
 and the rendering process is handled by the GPU.
 
-<img width="330px" src="https://user-images.githubusercontent.com/42887325/227467348-7d3dd17d-f69f-4f1c-ae3a-9f23e0283258.gif"/>
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/227467594-8e08e4f0-4274-4ea3-bcd9-c40ec5b305f8.gif"/>
 
 ### Drag and Drop
 
