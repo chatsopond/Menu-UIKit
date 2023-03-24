@@ -60,4 +60,4 @@ When a user taps on a cell, the cell smoothly resizes and expands to reveal addi
 
 ### Reduced Spacing in Last Row of Collection View
 
-There is a known issue in this project where, if a cell changes size and the last row of the collection view is not full, the spacing between each cell in the last row will be reduced. [(see here)](https://github.com/chatsopond/Menu-UIKit/tree/main/README.md#dynamic-resizing-collection-view-cells)
+There is a known issue in this project where, if a cell changes size and the last row of the collection view is not full, the spacing between each cell in the last row will be reduced. [(see here)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedCollectionViewFlowLayout.swift)
