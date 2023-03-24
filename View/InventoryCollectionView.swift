@@ -12,7 +12,7 @@ import Anchorage
 class InventoryCollectionView: UICollectionView {
   /// The layout for the collection view
   private let inventoryLayout: UICollectionViewFlowLayout = {
-    let layout = UICollectionViewFlowLayout()
+    let layout = TopAlignedCollectionViewFlowLayout()
     layout.scrollDirection = .vertical
     layout.minimumLineSpacing = 10
     layout.minimumInteritemSpacing = 10

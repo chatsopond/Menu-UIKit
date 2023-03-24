@@ -17,6 +17,8 @@ class InventoryViewController: UIViewController {
   /// The view model used to populate the inventory.
   private let viewModel: InventoryViewModel
 
+  private var expandedCellIndexPath: IndexPath?
+
   /// Initializes a new instance of the InventoryViewController class.
   ///
   /// - Parameter viewModel: The view model to use.
@@ -40,6 +42,15 @@ class InventoryViewController: UIViewController {
     inventoryView.inventoryCollectionView.dragInteractionEnabled = true
     inventoryView.inventoryCollectionView.dragDelegate = self
     inventoryView.inventoryCollectionView.dropDelegate = self
+  }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension InventoryViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    expandedCellIndexPath = indexPath
+    collectionView.performBatchUpdates(nil)
   }
 }
 
@@ -78,7 +89,7 @@ extension InventoryViewController: UICollectionViewDelegateFlowLayout {
   /// - Parameter indexPath: The index path of the item.
   /// - Returns: The width and height of the specified item. Both values must be greater than 0.
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 112, height: 136)
+    return CGSize(width: 112, height: expandedCellIndexPath == indexPath ? 216 : 136)
   }
 }
 

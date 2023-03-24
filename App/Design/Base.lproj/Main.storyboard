@@ -26,32 +26,32 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="04T-LB-0PB">
                                 <rect key="frame" x="16" y="59" width="361" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xsi-pd-8a3">
-                                    <size key="itemSize" width="112" height="136"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oaC-Ld-UTf">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCollectionViewCell" id="M0S-7Z-831">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                        <rect key="frame" x="0.0" y="44" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wRS-5g-WIW">
-                                            <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Quality_1_background" translatesAutoresizingMaskIntoConstraints="NO" id="hCs-FC-1oV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="136"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item/apple" translatesAutoresizingMaskIntoConstraints="NO" id="HGk-i0-kgD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="114"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="106"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 </imageView>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faR-4G-PTU">
-                                                    <rect key="frame" x="0.0" y="112" width="112" height="24"/>
+                                                    <rect key="frame" x="0.0" y="104" width="128" height="24"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPB-ba-hlc">
-                                                            <rect key="frame" x="52.666666666666664" y="5" width="7" height="14"/>
+                                                            <rect key="frame" x="60.666666666666657" y="5" width="7" height="14"/>
                                                             <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="17"/>
                                                             <color key="textColor" name="Color/Label"/>
                                                             <nil key="highlightedColor"/>
@@ -84,6 +84,117 @@
                                             </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCollectionViewCell2" id="Mcc-BU-pEw">
+                                        <rect key="frame" x="138" y="0.0" width="112" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2bd-w0-84G">
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" id="MWR-WD-5sW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gM7-gZ-ip1" userLabel="112x136">
+                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="131"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Quality_2_background" translatesAutoresizingMaskIntoConstraints="NO" id="dbE-er-W4z" userLabel="Item Background">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="131"/>
+                                                                </imageView>
+                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3N-C3-dnn" userLabel="Item Label View">
+                                                                    <rect key="frame" x="0.0" y="107" width="112" height="24"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-5T-GeZ" userLabel="Item Label">
+                                                                            <rect key="frame" x="0.0" y="5" width="112" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="17"/>
+                                                                            <color key="textColor" name="Color/Label"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" name="Color/Background Label"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="FfK-5T-GeZ" firstAttribute="leading" secondItem="e3N-C3-dnn" secondAttribute="leading" id="2sH-e2-zOs"/>
+                                                                        <constraint firstItem="FfK-5T-GeZ" firstAttribute="top" secondItem="e3N-C3-dnn" secondAttribute="top" constant="5" id="4H2-b3-ELJ"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="FfK-5T-GeZ" secondAttribute="bottom" constant="5" id="7b6-HM-S5o"/>
+                                                                        <constraint firstAttribute="height" constant="24" id="c3s-lS-Llp"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="FfK-5T-GeZ" secondAttribute="trailing" id="gNI-fA-ZqI"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item/Crystal Shrimp" translatesAutoresizingMaskIntoConstraints="NO" id="69Z-yV-2eN" userLabel="Item Image">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="107"/>
+                                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="e3N-C3-dnn" secondAttribute="bottom" id="3VF-ay-bfd"/>
+                                                                <constraint firstAttribute="width" constant="112" id="7l9-6a-o1b"/>
+                                                                <constraint firstItem="69Z-yV-2eN" firstAttribute="leading" secondItem="gM7-gZ-ip1" secondAttribute="leading" id="Bn6-pH-Hqj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="69Z-yV-2eN" secondAttribute="trailing" id="Jow-Ms-Ef7"/>
+                                                                <constraint firstItem="e3N-C3-dnn" firstAttribute="leading" secondItem="gM7-gZ-ip1" secondAttribute="leading" id="S4F-NV-Xar"/>
+                                                                <constraint firstItem="dbE-er-W4z" firstAttribute="top" secondItem="gM7-gZ-ip1" secondAttribute="top" id="UMJ-28-vv8"/>
+                                                                <constraint firstAttribute="trailing" secondItem="dbE-er-W4z" secondAttribute="trailing" id="VJW-6t-Ngs"/>
+                                                                <constraint firstItem="dbE-er-W4z" firstAttribute="leading" secondItem="gM7-gZ-ip1" secondAttribute="leading" id="caY-Jk-F9D"/>
+                                                                <constraint firstAttribute="bottom" secondItem="dbE-er-W4z" secondAttribute="bottom" id="mdY-Nf-0FJ"/>
+                                                                <constraint firstItem="e3N-C3-dnn" firstAttribute="top" secondItem="69Z-yV-2eN" secondAttribute="bottom" id="nhV-Au-EtZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="e3N-C3-dnn" secondAttribute="trailing" id="v6G-4q-sOS"/>
+                                                                <constraint firstItem="69Z-yV-2eN" firstAttribute="top" secondItem="gM7-gZ-ip1" secondAttribute="top" id="xYq-Uy-dDT"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ai9-If-rCf" userLabel="112x80">
+                                                            <rect key="frame" x="0.0" y="136" width="112" height="80"/>
+                                                            <subviews>
+                                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-U8-Hej">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="80"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7D0-Lm-Rcq">
+                                                                            <rect key="frame" x="1" y="0.0" width="110" height="233.66666666666666"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-oC-W8k">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="233.66666666666666"/>
+                                                                                    <string key="text">One of Liyue's traditional snacks. The stuffing is taken from whole fresh shrimp, and the glistening quality of the flour can be guessed at from the translucence of the outer skin. Has a springy, tasty chew.</string>
+                                                                                    <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.28649741410000001" green="0.32537525890000002" blue="0.38432306049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="7D0-Lm-Rcq" firstAttribute="trailing" secondItem="6Yv-Vz-C44" secondAttribute="trailing" id="H82-VX-XF6"/>
+                                                                        <constraint firstItem="7D0-Lm-Rcq" firstAttribute="bottom" secondItem="6Yv-Vz-C44" secondAttribute="bottom" id="Qka-ld-wqJ"/>
+                                                                        <constraint firstItem="7D0-Lm-Rcq" firstAttribute="top" secondItem="6Yv-Vz-C44" secondAttribute="top" id="SaU-Iz-kMw"/>
+                                                                        <constraint firstItem="7D0-Lm-Rcq" firstAttribute="width" secondItem="4VE-N6-eOh" secondAttribute="width" multiplier="0.982143" id="qZQ-lJ-crB"/>
+                                                                        <constraint firstItem="7D0-Lm-Rcq" firstAttribute="leading" secondItem="6Yv-Vz-C44" secondAttribute="leading" constant="1" id="xbD-dW-BxI"/>
+                                                                    </constraints>
+                                                                    <viewLayoutGuide key="contentLayoutGuide" id="6Yv-Vz-C44"/>
+                                                                    <viewLayoutGuide key="frameLayoutGuide" id="4VE-N6-eOh"/>
+                                                                </scrollView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="i2J-U8-Hej" firstAttribute="top" secondItem="Ai9-If-rCf" secondAttribute="top" id="5yv-ha-gKz"/>
+                                                                <constraint firstAttribute="bottom" secondItem="i2J-U8-Hej" secondAttribute="bottom" id="BuX-b6-j0o"/>
+                                                                <constraint firstAttribute="trailing" secondItem="i2J-U8-Hej" secondAttribute="trailing" id="Dmt-0g-gi4"/>
+                                                                <constraint firstItem="i2J-U8-Hej" firstAttribute="leading" secondItem="Ai9-If-rCf" secondAttribute="leading" id="Dqy-Jm-4Ya"/>
+                                                                <constraint firstAttribute="height" constant="80" id="HzK-lM-Owx"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MWR-WD-5sW" secondAttribute="bottom" id="MRQ-bM-F4h"/>
+                                                <constraint firstAttribute="trailing" secondItem="MWR-WD-5sW" secondAttribute="trailing" id="aJt-FI-YXS"/>
+                                                <constraint firstItem="MWR-WD-5sW" firstAttribute="top" secondItem="2bd-w0-84G" secondAttribute="top" id="d8r-0e-0Iy"/>
+                                                <constraint firstItem="MWR-WD-5sW" firstAttribute="leading" secondItem="2bd-w0-84G" secondAttribute="leading" id="zXN-T4-oOJ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="112" height="216"/>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -104,6 +215,8 @@
     </scenes>
     <resources>
         <image name="Background/Quality_1_background" width="112" height="136"/>
+        <image name="Background/Quality_2_background" width="112" height="136"/>
+        <image name="Item/Crystal Shrimp" width="256" height="256"/>
         <image name="Item/apple" width="256" height="256"/>
         <namedColor name="Color/Background Label">
             <color red="0.9100000262260437" green="0.89800000190734863" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -113,6 +226,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
