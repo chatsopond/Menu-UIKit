@@ -46,4 +46,4 @@ and the rendering process is handled by the GPU.
 I have added the drag and drop functionality to the inventory feature of our application. 
 This means that users can now easily move items within their inventory by simply clicking and dragging them to their desired location. 
 
-<img width="330px" src="https://user-images.githubusercontent.com/42887325/227457888-c3138758-7f3d-4130-a1cd-55109db42725.gif">
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/227466449-21e8c8be-92d0-4751-aafa-c66244edbdbf.gif">
