@@ -59,6 +59,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     contentView.addSubview(itemImage)
     contentView.addSubview(itemLabelBackground)
     itemLabelBackground.addSubview(itemLabel)
+
+    let clearView = UIView()
+    clearView.backgroundColor = .clear
+    selectedBackgroundView = clearView
   }
 
   /// Sets up the constraints for the subviews of the cell.
@@ -81,8 +85,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
 
   /// Styles the subviews of the cell.
   private func styleViews() {
-    contentView.clipsToBounds = true
-    contentView.layer.cornerRadius = 10
+    clipsToBounds = true
+    layer.cornerRadius = 10
+    layer.masksToBounds = true
 
     backgroundImage.image = item?.backgroundImage ?? UIImage(named: "Background/Quality_1_background")
     backgroundImage.contentMode = .scaleAspectFill

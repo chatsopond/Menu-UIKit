@@ -37,6 +37,9 @@ class InventoryViewController: UIViewController {
     view = inventoryView
     inventoryView.inventoryCollectionView.dataSource = self
     inventoryView.inventoryCollectionView.delegate = self
+    inventoryView.inventoryCollectionView.dragInteractionEnabled = true
+    inventoryView.inventoryCollectionView.dragDelegate = self
+    inventoryView.inventoryCollectionView.dropDelegate = self
   }
 }
 
@@ -74,5 +77,40 @@ extension InventoryViewController: UICollectionViewDelegateFlowLayout {
   /// - Returns: The width and height of the specified item. Both values must be greater than 0.
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 112, height: 136)
+  }
+}
+
+
+// MARK: - Drag & Drop
+
+extension InventoryViewController: UICollectionViewDragDelegate, UICollectionViewDropDelegate {
+  func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+    let item = viewModel.item(at: indexPath.row)
+    let itemProvider = NSItemProvider(object: item.id as NSString)
+    let dragItem = UIDragItem(itemProvider: itemProvider)
+    dragItem.localObject = item
+    return [dragItem]
+  }
+
+  func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+    guard let destinationIndexPath = coordinator.destinationIndexPath else { return }
+    if let item = coordinator.items.first, let sourceIndexPath = item.sourceIndexPath {
+      collectionView.performBatchUpdates({
+        viewModel.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+        collectionView.moveItem(at: sourceIndexPath, to: destinationIndexPath)
+      }, completion: nil)
+      coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
+    }
+  }
+
+  func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+    return session.canLoadObjects(ofClass: NSString.self)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+    if collectionView.hasActiveDrag {
+      return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+    }
+    return UICollectionViewDropProposal(operation: .forbidden)
   }
 }

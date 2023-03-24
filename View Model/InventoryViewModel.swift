@@ -37,4 +37,16 @@ class InventoryViewModel {
   func item(at index: Int) -> InventoryItem {
     return items[index]
   }
+
+  /// Moves an inventory item from one position to another.
+  ///
+  /// - Parameters:
+  ///   - sourceIndex: The index of the item to move.
+  ///   - destinationIndex: The index to move the item to.
+  func moveItem(from sourceIndex: Int, to destinationIndex: Int) {
+    guard sourceIndex != destinationIndex else { return }
+
+    let itemToMove = inventory.inventoryItems.remove(at: sourceIndex)
+    inventory.inventoryItems.insert(itemToMove, at: destinationIndex)
+  }
 }

@@ -106,10 +106,10 @@
         <image name="Background/Quality_1_background" width="112" height="136"/>
         <image name="Item/apple" width="256" height="256"/>
         <namedColor name="Color/Background Label">
-            <color red="0.90972536800000003" green="0.89809042220000002" blue="0.86666125059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9100000262260437" green="0.89800000190734863" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Color/Label">
-            <color red="0.28649741410000001" green="0.32537525890000002" blue="0.38432306049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.28600001335144043" green="0.32499998807907104" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
