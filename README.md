@@ -4,6 +4,8 @@
 
 - [x] Anchorage
 
+If you are interested in exploring other usage of popular frameworks such as ReactiveSwift, Moya, Realm, and Starscream, you can take a look at the following [this repository](https://github.com/chatsopond/QuickNews-ReactiveSwift)
+
 ### Objectives
 
 - [x] Adopt MVVM + Coordinator
@@ -15,7 +17,7 @@
 - Profiling
   - [ ] CPU
   - [ ] Memory (Leak and zombie)
-
+  
 ### Architecture
 
 - UIKit without Storyboard
