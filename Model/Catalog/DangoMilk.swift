@@ -9,7 +9,7 @@
 import Foundation
 
 struct DangoMilk: Item {
-  let id = String(describing: AppleItem.self)
+  let id = String(describing: DangoMilk.self)
   let imageName = "Item/Dango Milk"
   let title = "Dango Milk"
   let description = "A creative snack made by adding sticky dango to milk. It is sweet and has a dense mouthfeel. All the customers who have tried it love it. Still, it is dango that's been added in — drink too much and you might lose your appetite."

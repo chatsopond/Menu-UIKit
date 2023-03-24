@@ -20,14 +20,18 @@ protocol Item: Identifiable {
   var description: String { get }
   /// The quality of the item (e.g. number of stars)
   var quality: Int { get }
+  /// The recipe for the item, which is an array of Item
+  var recipe: [any Item]? { get }
 
   /// The background image for the item
   var backgroundImage: UIImage { get }
 }
 
 extension Item {
+  /// The recipe for the item, which is an array of Item
+  var recipe: [any Item]? { nil }
   /// The background image for the item based on its quality
   var backgroundImage: UIImage {
-    UIImage(named: "Background/Background_Item_\(quality)_Star")!
+    UIImage(named: "Background/Quality_\(quality)_background")!
   }
 }
