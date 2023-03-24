@@ -4,6 +4,8 @@
 
 - [x] Anchorage
 
+If you are interested in exploring other usage of popular frameworks such as ReactiveSwift, Moya, Realm, and Starscream, you can take a look at the following [this repository](https://github.com/chatsopond/QuickNews-ReactiveSwift)
+
 ### Objectives
 
 - [x] Adopt MVVM + Coordinator
@@ -15,7 +17,7 @@
 - Profiling
   - [ ] CPU
   - [ ] Memory (Leak and zombie)
-
+  
 ### Architecture
 
 - UIKit without Storyboard
@@ -39,7 +41,7 @@ var color4 = SIMD4<Float>(1, 1, 1, 1)
 This background is energy efficient because it only needs to be redrawn once per second, 
 and the rendering process is handled by the GPU.
 
-<img width="330px" src="https://user-images.githubusercontent.com/42887325/227458051-e3d3d7ff-311b-4d7e-b6d9-cac3972cd0ff.gif"/>
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/227467594-8e08e4f0-4274-4ea3-bcd9-c40ec5b305f8.gif"/>
 
 ### Drag and Drop
 
