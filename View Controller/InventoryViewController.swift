@@ -62,7 +62,9 @@ extension InventoryViewController: UICollectionViewDataSource {
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier,
       for: indexPath) as! ItemCollectionViewCell
-    cell.inventoryItem = viewModel.item(at: indexPath.row)
+    let inventoryItem = viewModel.item(at: indexPath.row)
+    let cellViewModel = ItemCollectionViewModel(inventoryItem: inventoryItem)
+    cell.viewModel = cellViewModel
     return cell
   }
 }

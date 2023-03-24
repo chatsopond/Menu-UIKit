@@ -14,15 +14,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
   /// The reusable identifier for the cell.
   static let reuseIdentifier = "ItemCollectionViewCell"
 
-  /// The InventoryItem that the cell displays.
-  var inventoryItem: InventoryItem? {
+  var viewModel: ItemCollectionViewModel? {
     didSet {
       styleViews()
     }
   }
-
-  /// The item associated with the InventoryItem.
-  var item: (any Item)? { inventoryItem?.item }
 
   /// The background image of the cell.
   private let backgroundImage = UIImageView()
@@ -89,7 +85,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     layer.cornerRadius = 10
     layer.masksToBounds = true
 
-    backgroundImage.image = item?.backgroundImage ?? UIImage(named: "Background/Quality_1_background")
+    backgroundImage.image = viewModel?.item.backgroundImage ?? UIImage(named: "Background/Quality_1_background")
     backgroundImage.contentMode = .scaleAspectFill
     backgroundImage.clipsToBounds = true
 
@@ -97,20 +93,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemLabelBackground.clipsToBounds = true
 
     let font = UIFont(name: "HYWenHei-HEW", size: 17.0)!
-    itemLabel.text = "\(inventoryItem?.amount ?? 0)"
+    itemLabel.text = "\(viewModel?.inventoryItem.amount ?? 0)"
     itemLabel.textColor = UIColor(named: "Color/Label")
     itemLabel.font = font
     itemLabel.textAlignment = .center
 
-    itemImage.image = UIImage(named: item?.imageName ?? "")
-  }
-
-  /// Configures the cell with the specified background and item images.
-  ///
-  /// - Parameter backgroundImage: The background image to set.
-  /// - Parameter weaponImage: The item image to set.
-  func configure(backgroundImage: UIImage, weaponImage: UIImage) {
-    self.backgroundImage.image = backgroundImage
-    self.itemImage.image = weaponImage
+    itemImage.image = UIImage(named: viewModel?.item.imageName ?? "")
   }
 }
