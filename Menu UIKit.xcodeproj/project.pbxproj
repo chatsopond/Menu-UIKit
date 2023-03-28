@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B18F8F729CDBCCB00B6435E /* TopLeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B18F8F629CDBCCB00B6435E /* TopLeftAlignedCollectionViewFlowLayout.swift */; };
-		6B18F8F929CDCE3000B6435E /* TopAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B18F8F829CDCE3000B6435E /* TopAlignedCollectionViewFlowLayout.swift */; };
+		6B18F8F929CDCE3000B6435E /* TopAlignedAndCenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B18F8F829CDCE3000B6435E /* TopAlignedAndCenteredFlowLayout.swift */; };
 		6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAC729CB168D00769542 /* AppDelegate.swift */; };
 		6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAAC929CB168D00769542 /* SceneDelegate.swift */; };
 		6B2CAACC29CB168D00769542 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAACB29CB168D00769542 /* ViewController.swift */; };
@@ -45,8 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B18F8F629CDBCCB00B6435E /* TopLeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		6B18F8F829CDCE3000B6435E /* TopAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		6B18F8F829CDCE3000B6435E /* TopAlignedAndCenteredFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedAndCenteredFlowLayout.swift; sourceTree = "<group>"; };
 		6B2CAAC429CB168D00769542 /* Menu UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2CAAC729CB168D00769542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B2CAAC929CB168D00769542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +104,7 @@
 		6B18F8F529CDBCBB00B6435E /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				6B18F8F629CDBCCB00B6435E /* TopLeftAlignedCollectionViewFlowLayout.swift */,
-				6B18F8F829CDCE3000B6435E /* TopAlignedCollectionViewFlowLayout.swift */,
+				6B18F8F829CDCE3000B6435E /* TopAlignedAndCenteredFlowLayout.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -392,7 +389,6 @@
 				6B2CAB1E29CD930200769542 /* Rice.swift in Sources */,
 				6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */,
 				6B2CAB2229CD964800769542 /* Carrot.swift in Sources */,
-				6B18F8F729CDBCCB00B6435E /* TopLeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				6B2CAAFC29CC541700769542 /* Item.swift in Sources */,
 				6B2CAB1A29CC6ACD00769542 /* Dango Milk.swift in Sources */,
 				6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */,
@@ -402,7 +398,7 @@
 				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
 				6B2CAB2029CD936500769542 /* Shrimp Meat.swift in Sources */,
-				6B18F8F929CDCE3000B6435E /* TopAlignedCollectionViewFlowLayout.swift in Sources */,
+				6B18F8F929CDCE3000B6435E /* TopAlignedAndCenteredFlowLayout.swift in Sources */,
 				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
 				6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */,
 				6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */,

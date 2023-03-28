@@ -29,7 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         .init(item: CarrotItem(), amount: 2),
         .init(item: CrystalShrimpItem(), amount: 2),
         .init(item: RiceItem(), amount: 12),
-        .init(item: ShrimpMeatItem(), amount: 4)
       ])
     let navigationController = GradientFlowUINavigationController()
     inventoryCoordinator = InventoryCoordinator(navigationController: navigationController, inventory: inventory)
