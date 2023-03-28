@@ -12,7 +12,7 @@ If you are interested in exploring other usage of popular frameworks such as Rea
 - [x] Adopt UIKit without Storyboard
 - [x] Adopt Anchorage
 - UICollectionView
-  - [ ] Each item can have a different size.
+  - [x] Each item can have a different size.
   - [x] Drag and drop
 - Profiling
   - [ ] CPU
@@ -52,12 +52,16 @@ This means that users can now easily move items within their inventory by simply
 
 ### Dynamic Resizing Collection View Cells
 
-When a user taps on a cell, the cell smoothly resizes and expands to reveal additional information about the item. The expanded cell then returns to its original size when the user taps on a different cell. It is noticeable that each cell in the collection view is aligned to the top instead of being centered. This means that the cell's origin (i.e., its starting point) is at the top of the cell, rather than at the center. [(See more)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedCollectionViewFlowLayout.swift)
+When a user taps on a cell, the cell smoothly resizes and expands to reveal additional information about the item. The expanded cell then returns to its original size when the user taps on a different cell. It is noticeable that each cell in the collection view is aligned to the top instead of being centered. This means that the cell's origin (i.e., its starting point) is at the top of the cell, rather than at the center. [(See more)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedAndCenteredFlowLayout.swift)
 
-<img width="330px" src="https://user-images.githubusercontent.com/42887325/227534576-6c8b5e81-f1ed-4728-b87c-5617c16d7935.gif"/>
+<img width="545px" src="https://user-images.githubusercontent.com/42887325/228250354-bde53fd2-6382-4235-81be-4b44dfb05cf1.gif"/>
 
-## Known Issues
+## Solved Issue
 
 ### Reduced Spacing in Last Row of Collection View
 
 There is a known issue in this project where, if a cell changes size and the last row of the collection view is not full, the spacing between each cell in the last row will be reduced. [(see here)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedCollectionViewFlowLayout.swift)
+
+**Solved**
+
+Upon further analysis, it became clear that the issue previously encountered was not actually a problem. It is reasonable for the last row with a smaller number of cells to have less spacing, given that cell size is not constant. As the width can change, it is impossible to guarantee a consistent minimum spacing with any additional pixels. To enhance control over cell positioning, it is advised to set cell locations manually. For instance, if the first row is full, its maximum spacing can be calculated and then used as the new minimum spacing for the second row and any following rows. [(See TopAlignedAndCenteredFlowLayout.swift)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedAndCenteredFlowLayout.swift)
