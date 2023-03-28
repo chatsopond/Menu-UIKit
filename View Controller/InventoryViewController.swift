@@ -49,7 +49,7 @@ class InventoryViewController: UIViewController {
 
 extension InventoryViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    expandedCellIndexPath = indexPath
+    expandedCellIndexPath = expandedCellIndexPath == indexPath ? nil : indexPath
     collectionView.performBatchUpdates(nil) { animationCompletion in
       guard animationCompletion else { return }
       collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
