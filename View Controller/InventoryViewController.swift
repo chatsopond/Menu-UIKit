@@ -55,6 +55,18 @@ extension InventoryViewController: UICollectionViewDelegate {
       collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
   }
+
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    // Add extra bottom inset to the last section
+    let numberOfSections = collectionView.numberOfSections
+    let lastSection = numberOfSections - 1
+    if section == lastSection {
+      // Add extra bottom inset to the last section
+      return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+    } else {
+      return UIEdgeInsets.zero
+    }
+  }
 }
 
 // MARK: - UICollectionViewDataSource

@@ -75,23 +75,27 @@ class ItemCollectionViewCell: UICollectionViewCell {
 
     // Item Detail View
     itemDetailView.accessibilityLabel = "112x80"
-    itemDetailView.addSubview(itemDetailStackView)
+    itemDetailView.addSubview(itemDetailScrollView)
+    itemDetailScrollView.addSubview(itemDetailStackView)
     itemDetailStackView.addArrangedSubview(itemDetailLabel)
-
-    let clearView = UIView()
-    clearView.backgroundColor = .clear
-    selectedBackgroundView = clearView
   }
 
   /// Sets up the constraints for the subviews of the cell.
   private func setupConstraints() {
     stackView.edgeAnchors == contentView.edgeAnchors
     stackView.axis = .vertical
-    stackView.alignment = .fill
-    stackView.distribution = .equalCentering
+    stackView.alignment = .center
+    stackView.distribution = .fill
+    stackView.spacing = 6
 
-    itemCoverView.horizontalAnchors == stackView.horizontalAnchors
-    itemCoverView.topAnchor == stackView.topAnchor
+    // This ensures that the stack view won't resize the views vertically,
+    // and that the views won't be compressed or stretched by the stack view.
+    itemCoverView.setContentHuggingPriority(.required, for: .vertical)
+    itemCoverView.setContentCompressionResistancePriority(.required, for: .vertical)
+    itemDetailView.setContentHuggingPriority(.required, for: .vertical)
+    itemDetailView.setContentCompressionResistancePriority(.required, for: .vertical)
+
+    itemCoverView.widthAnchor == stackView.widthAnchor
     itemCoverView.heightAnchor == 136
 
     itemBackgroundImage.edgeAnchors == itemCoverView.edgeAnchors
@@ -108,16 +112,28 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemImage.topAnchor == itemCoverView.topAnchor
     itemImage.bottomAnchor == itemLabelBackground.topAnchor
 
-    itemDetailView.backgroundColor = .green
+    itemDetailView.topAnchor == itemCoverView.bottomAnchor + 5
+    itemDetailView.widthAnchor == contentView.widthAnchor
+
+    itemDetailScrollView.edgeAnchors == itemDetailView.edgeAnchors
 
     itemDetailStackView.axis = .vertical
-    itemDetailStackView.alignment = .fill
-    itemDetailStackView.distribution = .fill
-    itemDetailStackView.edgeAnchors == itemDetailView.edgeAnchors
+    itemDetailStackView.alignment = .center
+    itemDetailStackView.distribution = .fillEqually
+    itemDetailStackView.edgeAnchors == itemDetailScrollView.edgeAnchors
+    itemDetailStackView.widthAnchor == itemDetailScrollView.widthAnchor
+
+    let insets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+    itemDetailLabel.edgeAnchors == itemDetailStackView.edgeAnchors + insets
   }
 
   /// Styles the subviews of the cell.
   private func styleViews() {
+    let clearView = UIView()
+    clearView.backgroundColor = .clear
+    selectedBackgroundView = clearView
+    itemDetailLabel.numberOfLines = 0
+
     clipsToBounds = true
     layer.cornerRadius = 10
     layer.masksToBounds = true
@@ -125,6 +141,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemCoverView.clipsToBounds = true
     itemCoverView.layer.cornerRadius = 10
     itemCoverView.layer.masksToBounds = true
+
+    itemDetailView.clipsToBounds = true
+    itemDetailView.layer.cornerRadius = 10
+    itemDetailView.layer.masksToBounds = true
+    itemDetailView.backgroundColor = UIColor(named: ("Color/Background Label"))?.withAlphaComponent(0.5)
 
     itemBackgroundImage.image = viewModel?.item.backgroundImage ?? UIImage(named: "Background/Quality_1_background")
     itemBackgroundImage.contentMode = .scaleAspectFill
@@ -140,6 +161,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     itemLabel.textAlignment = .center
 
     itemImage.image = UIImage(named: viewModel?.item.imageName ?? "")
+    itemImage.contentMode = .scaleAspectFill
 
     let detailFont = UIFont(name: "HYWenHei-HEW", size: 12.0)!
     itemDetailLabel.text = viewModel?.inventoryItem.item.description ?? ""
