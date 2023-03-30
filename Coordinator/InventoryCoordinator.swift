@@ -4,6 +4,7 @@
 //
 //  Created by Chatsopon Deepateep on 23/3/23.
 //
+// swiftlint:disable implicitly_unwrapped_optional
 
 import UIKit
 
@@ -17,7 +18,7 @@ class InventoryCoordinator: Coordinator {
   /// Stores the child coordinators
   var childCoordinators: [Coordinator] = []
   /// A weak reference to the navigation controller used to manage the navigation stack
-  weak var navigationController: UINavigationController?
+  weak var navigationController: UINavigationController!
 
   // MARK: - Body
   /// Initializes the inventory coordinator with a navigation controller and an inventory
@@ -33,7 +34,16 @@ class InventoryCoordinator: Coordinator {
     let viewModel = InventoryViewModel(inventory: inventory)
     // Create a view controller with the view model
     let viewController = InventoryViewController(viewModel: viewModel)
+    viewController.onItemSelected = { inventoryItem in
+      self.showItemDetail(for: inventoryItem)
+    }
     // Push the view controller onto the navigation stack
     navigationController?.pushViewController(viewController, animated: true)
+  }
+
+  private func showItemDetail(for item: InventoryItem) {
+    let itemDetailCoordinator = ItemDetailCoordinator(navigationController: navigationController, item: item)
+    childCoordinators.append(itemDetailCoordinator)
+    itemDetailCoordinator.start()
   }
 }

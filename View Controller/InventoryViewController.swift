@@ -19,6 +19,8 @@ class InventoryViewController: UIViewController {
 
   private var expandedCellIndexPath: IndexPath?
 
+  var onItemSelected: ((InventoryItem) -> Void)?
+
   /// Initializes a new instance of the InventoryViewController class.
   ///
   /// - Parameter viewModel: The view model to use.
@@ -54,6 +56,9 @@ extension InventoryViewController: UICollectionViewDelegate {
       guard animationCompletion else { return }
       collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
+
+    let inventoryItem = viewModel.item(at: indexPath.row)
+    onItemSelected?(inventoryItem)
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

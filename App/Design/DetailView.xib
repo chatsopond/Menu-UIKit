@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HYWenHei.ttf">
+            <string>HYWenHei-HEW</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-cw-VqY">
+                    <rect key="frame" x="0.0" y="59" width="393" height="53"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nu-Vj-7v5">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="53"/>
+                            <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="17"/>
+                            <color key="textColor" name="Color/Detail Title"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Color/Background Title"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Nu-Vj-7v5" secondAttribute="trailing" id="T9h-Yf-18f"/>
+                        <constraint firstAttribute="bottom" secondItem="8Nu-Vj-7v5" secondAttribute="bottom" id="XMF-sc-QUq"/>
+                        <constraint firstItem="8Nu-Vj-7v5" firstAttribute="top" secondItem="mbd-cw-VqY" secondAttribute="top" id="lrC-yf-LFj"/>
+                        <constraint firstItem="8Nu-Vj-7v5" firstAttribute="leading" secondItem="mbd-cw-VqY" secondAttribute="leading" id="qXx-6N-ipw"/>
+                        <constraint firstAttribute="height" constant="53" id="yo0-z6-D3g"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-nK-Ag8">
+                    <rect key="frame" x="0.0" y="120" width="393" height="393"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background/Background_Item_1_Star" translatesAutoresizingMaskIntoConstraints="NO" id="AOi-Lf-khY">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item/Apple" translatesAutoresizingMaskIntoConstraints="NO" id="8yI-8B-pEp">
+                            <rect key="frame" x="16" y="16" width="361" height="361"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="AOi-Lf-khY" firstAttribute="top" secondItem="K2c-nK-Ag8" secondAttribute="top" id="8cM-u5-548"/>
+                        <constraint firstItem="8yI-8B-pEp" firstAttribute="top" secondItem="K2c-nK-Ag8" secondAttribute="top" constant="16" id="9Kf-W9-mtv"/>
+                        <constraint firstAttribute="trailing" secondItem="AOi-Lf-khY" secondAttribute="trailing" id="9YW-W1-xGT"/>
+                        <constraint firstAttribute="bottom" secondItem="8yI-8B-pEp" secondAttribute="bottom" constant="16" id="BF3-hH-bgx"/>
+                        <constraint firstAttribute="width" secondItem="K2c-nK-Ag8" secondAttribute="height" multiplier="1:1" id="EfD-fX-jna"/>
+                        <constraint firstAttribute="bottom" secondItem="AOi-Lf-khY" secondAttribute="bottom" id="WwN-11-60S"/>
+                        <constraint firstItem="8yI-8B-pEp" firstAttribute="leading" secondItem="K2c-nK-Ag8" secondAttribute="leading" constant="16" id="aYp-i7-NMp"/>
+                        <constraint firstItem="AOi-Lf-khY" firstAttribute="leading" secondItem="K2c-nK-Ag8" secondAttribute="leading" id="gFZ-jK-nfk"/>
+                        <constraint firstAttribute="trailing" secondItem="8yI-8B-pEp" secondAttribute="trailing" constant="16" id="x4j-5D-jFn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-nk-eGR">
+                    <rect key="frame" x="0.0" y="521" width="393" height="190"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA6-zc-urG">
+                            <rect key="frame" x="8" y="8" width="377" height="136.33333333333334"/>
+                            <string key="text">Apples grow in groups of three on some Cuihua Trees in Mondstadt and Liyue, and can be harvested by either climbing or hitting the tree to make them fall within the player's reach. Dropped Apples may also be found at the base of such trees and in critter hideouts. They are most commonly found in Windwail Highland and Starfell Valley.</string>
+                            <fontDescription key="fontDescription" name="HYWenHei-HEW" family="HYWenHei" pointSize="14"/>
+                            <color key="textColor" name="Color/Background Label"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="rect" keyPath="layer.contentInset">
+                                    <rect key="value" x="8" y="8" width="8" height="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Color/Background Description"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dA6-zc-urG" secondAttribute="trailing" constant="8" id="Cmq-tR-oHu"/>
+                        <constraint firstItem="dA6-zc-urG" firstAttribute="leading" secondItem="K7S-nk-eGR" secondAttribute="leading" constant="8" id="nxE-mv-Rq5"/>
+                        <constraint firstAttribute="height" constant="190" id="xbc-zS-Kol"/>
+                        <constraint firstItem="dA6-zc-urG" firstAttribute="top" secondItem="K7S-nk-eGR" secondAttribute="top" constant="8" id="yUC-Px-1LF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mbd-cw-VqY" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2xL-Lv-c7k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K2c-nK-Ag8" secondAttribute="trailing" id="5G0-YR-lwu"/>
+                <constraint firstItem="K7S-nk-eGR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5SC-bI-LTP"/>
+                <constraint firstItem="mbd-cw-VqY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Bbp-xA-1cY"/>
+                <constraint firstItem="mbd-cw-VqY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EAe-EL-SNE"/>
+                <constraint firstItem="K7S-nk-eGR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="GYE-9X-hI7"/>
+                <constraint firstItem="K2c-nK-Ag8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TGz-6O-0ep"/>
+                <constraint firstItem="K2c-nK-Ag8" firstAttribute="top" secondItem="mbd-cw-VqY" secondAttribute="bottom" constant="8" symbolic="YES" id="eYo-cW-aUe"/>
+                <constraint firstItem="K7S-nk-eGR" firstAttribute="top" secondItem="K2c-nK-Ag8" secondAttribute="bottom" constant="8" symbolic="YES" id="kdR-hu-4IC"/>
+            </constraints>
+            <point key="canvasLocation" x="87.786259541984734" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Background/Background_Item_1_Star" width="256" height="256"/>
+        <image name="Item/Apple" width="256" height="256"/>
+        <namedColor name="Color/Background Description">
+            <color red="0.15299999713897705" green="0.16099999845027924" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Color/Background Label">
+            <color red="0.9100000262260437" green="0.89800000190734863" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Color/Background Title">
+            <color red="0.84700000286102295" green="0.72200000286102295" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Color/Detail Title">
+            <color red="0.10599999874830246" green="0.11400000005960464" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
