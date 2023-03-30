@@ -34,4 +34,7 @@ extension Item {
   var backgroundImage: UIImage {
     UIImage(named: "Background/Quality_\(quality)_background")!
   }
+  var backgroundCrispImage: UIImage {
+    UIImage(named: "Background/Background_Item_\(quality)_Star")!
+  }
 }

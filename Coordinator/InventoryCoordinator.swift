@@ -42,7 +42,7 @@ class InventoryCoordinator: Coordinator {
   }
 
   private func showItemDetail(for item: InventoryItem) {
-    let itemDetailCoordinator = ItemDetailCoordinator(navigationController: navigationController, item: item)
+    let itemDetailCoordinator = InventoryItemDetailCoordinator(navigationController: navigationController, item: item)
     childCoordinators.append(itemDetailCoordinator)
     itemDetailCoordinator.start()
   }

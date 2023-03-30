@@ -41,11 +41,17 @@
 		6B2CAB2029CD936500769542 /* Shrimp Meat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB1F29CD936500769542 /* Shrimp Meat.swift */; };
 		6B2CAB2229CD964800769542 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB2129CD964800769542 /* Carrot.swift */; };
 		6B2CAB2629CDA6E400769542 /* ItemCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAB2529CDA6E400769542 /* ItemCollectionViewModel.swift */; };
-		6B3F1EF829D569A500CA929D /* InventoryItemDetailTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EF729D569A500CA929D /* InventoryItemDetailTitleCell.swift */; };
-		6B3F1EFA29D569D300CA929D /* InventoryItemDetailTitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EF929D569D300CA929D /* InventoryItemDetailTitleCellViewModel.swift */; };
+		6B3F1EF829D569A500CA929D /* TitleInventoryItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EF729D569A500CA929D /* TitleInventoryItemDetailCell.swift */; };
+		6B3F1EFA29D569D300CA929D /* TitleInventoryItemDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EF929D569D300CA929D /* TitleInventoryItemDetailCellViewModel.swift */; };
 		6B3F1EFC29D56D8A00CA929D /* InventoryItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EFB29D56D8A00CA929D /* InventoryItemDetailView.swift */; };
+		6B3F1EFE29D579B600CA929D /* InventoryItemDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EFD29D579B600CA929D /* InventoryItemDetailCellViewModel.swift */; };
+		6B3F1F0029D586DC00CA929D /* ImageInventoryItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1EFF29D586DC00CA929D /* ImageInventoryItemDetailCell.swift */; };
+		6B3F1F0329D588C600CA929D /* ImageInventoryItemDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1F0229D588C600CA929D /* ImageInventoryItemDetailCellViewModel.swift */; };
+		6B3F1F0529D58C4600CA929D /* InventoryItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1F0429D58C4600CA929D /* InventoryItemDetailCell.swift */; };
+		6B3F1F0729D59B8C00CA929D /* RecipeInventoryItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1F0629D59B8C00CA929D /* RecipeInventoryItemDetailCell.swift */; };
+		6B3F1F0929D59C7E00CA929D /* RecipeInventoryItemDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1F0829D59C7E00CA929D /* RecipeInventoryItemDetailCellViewModel.swift */; };
 		6B665F1F29D543380089E193 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B665F1E29D543380089E193 /* ItemDetailViewController.swift */; };
-		6B665F2129D55A450089E193 /* ItemDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B665F2029D55A450089E193 /* ItemDetailCoordinator.swift */; };
+		6B665F2129D55A450089E193 /* InventoryItemDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B665F2029D55A450089E193 /* InventoryItemDetailCoordinator.swift */; };
 		6B665F2329D55D500089E193 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B665F2229D55D500089E193 /* ItemDetailViewModel.swift */; };
 		6B77F15D29D564110009C681 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B77F15C29D564110009C681 /* DetailView.xib */; };
 /* End PBXBuildFile section */
@@ -86,11 +92,17 @@
 		6B2CAB1F29CD936500769542 /* Shrimp Meat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shrimp Meat.swift"; sourceTree = "<group>"; };
 		6B2CAB2129CD964800769542 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
 		6B2CAB2529CDA6E400769542 /* ItemCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewModel.swift; sourceTree = "<group>"; };
-		6B3F1EF729D569A500CA929D /* InventoryItemDetailTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailTitleCell.swift; sourceTree = "<group>"; };
-		6B3F1EF929D569D300CA929D /* InventoryItemDetailTitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailTitleCellViewModel.swift; sourceTree = "<group>"; };
+		6B3F1EF729D569A500CA929D /* TitleInventoryItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleInventoryItemDetailCell.swift; sourceTree = "<group>"; };
+		6B3F1EF929D569D300CA929D /* TitleInventoryItemDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleInventoryItemDetailCellViewModel.swift; sourceTree = "<group>"; };
 		6B3F1EFB29D56D8A00CA929D /* InventoryItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailView.swift; sourceTree = "<group>"; };
+		6B3F1EFD29D579B600CA929D /* InventoryItemDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailCellViewModel.swift; sourceTree = "<group>"; };
+		6B3F1EFF29D586DC00CA929D /* ImageInventoryItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInventoryItemDetailCell.swift; sourceTree = "<group>"; };
+		6B3F1F0229D588C600CA929D /* ImageInventoryItemDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInventoryItemDetailCellViewModel.swift; sourceTree = "<group>"; };
+		6B3F1F0429D58C4600CA929D /* InventoryItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailCell.swift; sourceTree = "<group>"; };
+		6B3F1F0629D59B8C00CA929D /* RecipeInventoryItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInventoryItemDetailCell.swift; sourceTree = "<group>"; };
+		6B3F1F0829D59C7E00CA929D /* RecipeInventoryItemDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInventoryItemDetailCellViewModel.swift; sourceTree = "<group>"; };
 		6B665F1E29D543380089E193 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
-		6B665F2029D55A450089E193 /* ItemDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCoordinator.swift; sourceTree = "<group>"; };
+		6B665F2029D55A450089E193 /* InventoryItemDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailCoordinator.swift; sourceTree = "<group>"; };
 		6B665F2229D55D500089E193 /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
 		6B77F15C29D564110009C681 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,8 +198,8 @@
 				6B18F8F429CDB11C00B6435E /* Cell for Collection */,
 				6B3F1EF629D5690700CA929D /* Cell for Table */,
 				6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */,
-				6B2CAB0729CC5BFF00769542 /* InventoryView.swift */,
 				6B3F1EFB29D56D8A00CA929D /* InventoryItemDetailView.swift */,
+				6B2CAB0729CC5BFF00769542 /* InventoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,10 +286,10 @@
 		6B2CAB0429CC5BC400769542 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B3F1F0129D5881400CA929D /* Cell for Table */,
 				6B2CAB0529CC5BD500769542 /* InventoryViewModel.swift */,
 				6B2CAB2529CDA6E400769542 /* ItemCollectionViewModel.swift */,
 				6B665F2229D55D500089E193 /* ItemDetailViewModel.swift */,
-				6B3F1EF929D569D300CA929D /* InventoryItemDetailTitleCellViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -286,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */,
+				6B3F1EFD29D579B600CA929D /* InventoryItemDetailCellViewModel.swift */,
+				6B3F1F0429D58C4600CA929D /* InventoryItemDetailCell.swift */,
 			);
 			path = Definition;
 			sourceTree = "<group>";
@@ -294,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAB0D29CC5C5700769542 /* InventoryCoordinator.swift */,
-				6B665F2029D55A450089E193 /* ItemDetailCoordinator.swift */,
+				6B665F2029D55A450089E193 /* InventoryItemDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -302,7 +316,19 @@
 		6B3F1EF629D5690700CA929D /* Cell for Table */ = {
 			isa = PBXGroup;
 			children = (
-				6B3F1EF729D569A500CA929D /* InventoryItemDetailTitleCell.swift */,
+				6B3F1EF729D569A500CA929D /* TitleInventoryItemDetailCell.swift */,
+				6B3F1EFF29D586DC00CA929D /* ImageInventoryItemDetailCell.swift */,
+				6B3F1F0629D59B8C00CA929D /* RecipeInventoryItemDetailCell.swift */,
+			);
+			path = "Cell for Table";
+			sourceTree = "<group>";
+		};
+		6B3F1F0129D5881400CA929D /* Cell for Table */ = {
+			isa = PBXGroup;
+			children = (
+				6B3F1EF929D569D300CA929D /* TitleInventoryItemDetailCellViewModel.swift */,
+				6B3F1F0229D588C600CA929D /* ImageInventoryItemDetailCellViewModel.swift */,
+				6B3F1F0829D59C7E00CA929D /* RecipeInventoryItemDetailCellViewModel.swift */,
 			);
 			path = "Cell for Table";
 			sourceTree = "<group>";
@@ -414,21 +440,27 @@
 				6B2CAAE929CB257900769542 /* InventoryViewController.swift in Sources */,
 				6B2CAB0129CC54C200769542 /* Apple.swift in Sources */,
 				6B2CAAE129CB203C00769542 /* ItemCollectionViewCell.swift in Sources */,
+				6B3F1F0729D59B8C00CA929D /* RecipeInventoryItemDetailCell.swift in Sources */,
 				6B2CAAFE29CC549E00769542 /* Inventory.swift in Sources */,
 				6B2CAB1629CC699400769542 /* FoodItemCatalog.swift in Sources */,
 				6B2CAAF829CB50F600769542 /* GradientFlowUIViewController.swift in Sources */,
 				6B2CAB1E29CD930200769542 /* Rice.swift in Sources */,
 				6B2CAB1029CC60AE00769542 /* GradientFlowUINavigationController.swift in Sources */,
 				6B2CAB2229CD964800769542 /* Carrot.swift in Sources */,
+				6B3F1F0929D59C7E00CA929D /* RecipeInventoryItemDetailCellViewModel.swift in Sources */,
 				6B2CAAFC29CC541700769542 /* Item.swift in Sources */,
 				6B2CAB1A29CC6ACD00769542 /* Dango Milk.swift in Sources */,
+				6B3F1F0029D586DC00CA929D /* ImageInventoryItemDetailCell.swift in Sources */,
 				6B2CAB0B29CC5C2A00769542 /* Coordinator.swift in Sources */,
 				6B2CAAC829CB168D00769542 /* AppDelegate.swift in Sources */,
 				6B2CAB2629CDA6E400769542 /* ItemCollectionViewModel.swift in Sources */,
 				6B3F1EFC29D56D8A00CA929D /* InventoryItemDetailView.swift in Sources */,
-				6B665F2129D55A450089E193 /* ItemDetailCoordinator.swift in Sources */,
+				6B3F1F0529D58C4600CA929D /* InventoryItemDetailCell.swift in Sources */,
+				6B665F2129D55A450089E193 /* InventoryItemDetailCoordinator.swift in Sources */,
 				6B2CAB1829CC69BF00769542 /* Sunsettia.swift in Sources */,
+				6B3F1F0329D588C600CA929D /* ImageInventoryItemDetailCellViewModel.swift in Sources */,
 				6B2CAAE329CB214C00769542 /* InventoryCollectionView.swift in Sources */,
+				6B3F1EFE29D579B600CA929D /* InventoryItemDetailCellViewModel.swift in Sources */,
 				6B2CAACA29CB168D00769542 /* SceneDelegate.swift in Sources */,
 				6B2CAB2029CD936500769542 /* Shrimp Meat.swift in Sources */,
 				6B665F1F29D543380089E193 /* ItemDetailViewController.swift in Sources */,
@@ -436,8 +468,8 @@
 				6B2CAAF629CB500600769542 /* GradientFlowView.swift in Sources */,
 				6B2CAAF229CB4ADA00769542 /* UIColor+toFloat4.swift in Sources */,
 				6B2CAB0E29CC5C5700769542 /* InventoryCoordinator.swift in Sources */,
-				6B3F1EF829D569A500CA929D /* InventoryItemDetailTitleCell.swift in Sources */,
-				6B3F1EFA29D569D300CA929D /* InventoryItemDetailTitleCellViewModel.swift in Sources */,
+				6B3F1EF829D569A500CA929D /* TitleInventoryItemDetailCell.swift in Sources */,
+				6B3F1EFA29D569D300CA929D /* TitleInventoryItemDetailCellViewModel.swift in Sources */,
 				6B2CAB1C29CD918300769542 /* Crystal Shrimp.swift in Sources */,
 				6B2CAB0629CC5BD500769542 /* InventoryViewModel.swift in Sources */,
 				6B2CAB0829CC5BFF00769542 /* InventoryView.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ItemDetailCoordinator.swift
+//  InventoryItemDetailCoordinator.swift
 //  Menu UIKit
 //
 //  Created by Chatsopon Deepateep on 30/3/23.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemDetailCoordinator: Coordinator {
+class InventoryItemDetailCoordinator: Coordinator {
   var childCoordinators: [Coordinator] = []
   weak var navigationController: UINavigationController!
   private let item: InventoryItem
@@ -20,7 +20,7 @@ class ItemDetailCoordinator: Coordinator {
 
   func start() {
     let viewModel = ItemDetailViewModel(item: item)
-    let viewController = ItemDetailViewController(viewModel: viewModel)
+    let viewController = InventoryItemDetailViewController(viewModel: viewModel)
 
     // Create a new navigation controller for the modally presented view controller
     let itemDetailNavigationController = UINavigationController(rootViewController: viewController)
