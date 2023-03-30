@@ -41,6 +41,8 @@ class InventoryItemDetailView: UIView {
     addSubview(blurView)
     addSubview(tableView)
     sendSubviewToBack(blurView)
+    tableView.canCancelContentTouches = true
+    tableView.isUserInteractionEnabled = true
   }
 
   private func styleViews() {
