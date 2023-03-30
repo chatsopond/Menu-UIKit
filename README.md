@@ -14,6 +14,8 @@ If you are interested in exploring other usage of popular frameworks such as Rea
 - UICollectionView
   - [x] Each item can have a different size.
   - [x] Drag and drop
+- UITableView
+  - [ ] Each item can have a different size.
 - Profiling
   - [ ] CPU
   - [ ] Memory (Leak and zombie)
