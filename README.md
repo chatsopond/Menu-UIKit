@@ -14,9 +14,8 @@ If you are interested in exploring other usage of popular frameworks such as Rea
 - UICollectionView
   - [x] Each item can have a different size.
   - [x] Drag and drop
-- Profiling
-  - [ ] CPU
-  - [ ] Memory (Leak and zombie)
+- UITableView
+  - [x] Each item can have different height.
   
 ### Architecture
 
@@ -55,6 +54,18 @@ This means that users can now easily move items within their inventory by simply
 When a user taps on a cell, the cell smoothly resizes and expands to reveal additional information about the item. The expanded cell then returns to its original size when the user taps on a different cell. It is noticeable that each cell in the collection view is aligned to the top instead of being centered. This means that the cell's origin (i.e., its starting point) is at the top of the cell, rather than at the center. [(See more)](https://github.com/chatsopond/Menu-UIKit/blob/main/Style/TopAlignedAndCenteredFlowLayout.swift)
 
 <img width="545px" src="https://user-images.githubusercontent.com/42887325/228250354-bde53fd2-6382-4235-81be-4b44dfb05cf1.gif"/>
+
+### TopAlignedAndCenteredFlowLayout
+
+TopAlignedAndCenteredFlowLayout is a custom layout for a collection view in this app that aligns the items in each row to the top and centers them horizontally within the row if there is extra space. In other words, it arranges the items in the collection view such that they are neatly aligned and centered within their respective rows for better visual presentation.
+
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/229052940-a07b2887-a2ea-46df-9c84-56d7c6a03d87.gif">
+
+### Detail View
+
+Tap for tailored food details! Each item reveals different contents that depends on food information. Coordinator Design Pattern: The transition between the Inventory View and the Detail View is managed using the Coordinator Design Pattern. This architectural pattern ensures a clean separation of responsibilities, making it easier to maintain and scale the application.
+
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/229055119-5f08f78c-c02d-440a-aab3-a44438b669ca.gif">
 
 ## Solved Issue
 
