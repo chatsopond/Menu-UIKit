@@ -58,6 +58,18 @@ When a user taps on a cell, the cell smoothly resizes and expands to reveal addi
 
 <img width="545px" src="https://user-images.githubusercontent.com/42887325/228250354-bde53fd2-6382-4235-81be-4b44dfb05cf1.gif"/>
 
+### TopAlignedAndCenteredFlowLayout
+
+TopAlignedAndCenteredFlowLayout is a custom layout for a collection view in this app that aligns the items in each row to the top and centers them horizontally within the row if there is extra space. In other words, it arranges the items in the collection view such that they are neatly aligned and centered within their respective rows for better visual presentation.
+
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/229052940-a07b2887-a2ea-46df-9c84-56d7c6a03d87.gif">
+
+### Detail View
+
+Tap for tailored food details! Each item reveals different contents that depends on food information. Coordinator Design Pattern: The transition between the Inventory View and the Detail View is managed using the Coordinator Design Pattern. This architectural pattern ensures a clean separation of responsibilities, making it easier to maintain and scale the application.
+
+<img width="330px" src="https://user-images.githubusercontent.com/42887325/229055119-5f08f78c-c02d-440a-aab3-a44438b669ca.gif">
+
 ## Solved Issue
 
 ### Reduced Spacing in Last Row of Collection View
