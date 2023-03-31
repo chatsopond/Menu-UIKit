@@ -67,6 +67,21 @@ Tap for tailored food details! Each item reveals different contents that depends
 
 <img width="330px" src="https://user-images.githubusercontent.com/42887325/229055119-5f08f78c-c02d-440a-aab3-a44438b669ca.gif">
 
+An updated Coordinator should have the ability to remove itself from its parent's childCoordinators in onComplete, which is necessary to define when creating a Coordinator.
+
+```swift
+private func showItemDetail(for item: InventoryItem) {
+  let itemDetailCoordinator = InventoryItemDetailCoordinator(navigationController: navigationController, item: item)
+  itemDetailCoordinator.parentCoordinator = self
+  childCoordinators.append(itemDetailCoordinator)
+  itemDetailCoordinator.start()
+  itemDetailCoordinator.onComplete = { [weak self, weak itemDetailCoordinator] in
+    guard let self, let itemDetailCoordinator else { return }
+    self.removeChildCoordinator(itemDetailCoordinator)
+  }
+}
+```
+
 ## Solved Issue
 
 ### Reduced Spacing in Last Row of Collection View
