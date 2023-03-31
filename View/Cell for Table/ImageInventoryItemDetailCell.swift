@@ -17,6 +17,8 @@ class ImageInventoryItemDetailCell: UITableViewCell, InventoryItemDetailCell {
     }
   }
 
+  let detailView = UIView()
+  let itemBackgroundImage = UIImageView()
   let itemImage = UIImageView()
 
   var imageViewModel: ImageInventoryItemDetailCellViewModel? {
@@ -42,22 +44,37 @@ class ImageInventoryItemDetailCell: UITableViewCell, InventoryItemDetailCell {
 
   private func setupViews() {
     selectionStyle = .none
-    contentView.addSubview(itemImage)
+    contentView.addSubview(detailView)
+    detailView.addSubview(itemBackgroundImage)
+    detailView.addSubview(itemImage)
+    detailView.sendSubviewToBack(itemBackgroundImage)
   }
 
   private func styleViews() {
+    backgroundColor = .clear
+
     clipsToBounds = true
     layer.cornerRadius = 12
     layer.masksToBounds = true
+
+    detailView.clipsToBounds = true
+    detailView.layer.cornerRadius = 12
+    detailView.layer.masksToBounds = true
   }
 
   private func setupConstraints() {
-    itemImage.edgeAnchors == contentView.edgeAnchors
+    detailView.leadingAnchor == contentView.leadingAnchor
+    detailView.trailingAnchor == contentView.trailingAnchor
+    detailView.topAnchor == contentView.topAnchor
+    detailView.bottomAnchor == contentView.bottomAnchor - (viewModel?.bottomPadding ?? 0)
+    itemBackgroundImage.edgeAnchors == detailView.edgeAnchors
+    itemImage.edgeAnchors == detailView.edgeAnchors
   }
 
   private func updateUI() {
     guard let imageViewModel else { return }
-    backgroundView = UIImageView(image: imageViewModel.backgroundImage)
     itemImage.image = UIImage(named: imageViewModel.imageName)
+    itemBackgroundImage.image = imageViewModel.backgroundImage
+    setupConstraints()
   }
 }

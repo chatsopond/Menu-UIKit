@@ -25,6 +25,7 @@ class TopAlignedAndCenteredFlowLayout: UICollectionViewFlowLayout {
   /// It adjusts the origin.y of the items to align them to the top of their respective rows
   /// and centers the items horizontally within the row if there is extra space.
   override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    guard let collectionView else { return nil }
     guard let attributes = super.layoutAttributesForElements(in: rect)?.map({ $0.copy() }) as? [UICollectionViewLayoutAttributes] else { return nil }
 
     // maxY is used to track the maximum y-coordinate of the previous row.
@@ -80,7 +81,11 @@ class TopAlignedAndCenteredFlowLayout: UICollectionViewFlowLayout {
 
     // Revise the free spacing to center items horizontally within the row.
     if let lastAttributeInFirstRow = lastAttributeInFirstRow {
-      let rightEmptyPad = (collectionViewContentSize.width - sectionInset.right) - lastAttributeInFirstRow.frame.maxX
+      let rightEmptyPad = (collectionView.frame.width) - lastAttributeInFirstRow.frame.maxX
+      print("RightEmptyPad: \(rightEmptyPad)")
+      print("collectionView.frame.width: \(collectionView.frame.width)")
+      print("sectionInset.right: \(sectionInset.right)")
+      print("lastAttributeInFirstRow.frame.right.maxX: \(lastAttributeInFirstRow.frame.maxX)")
       if rightEmptyPad > 0 {
         for attribute in attributes {
           attribute.frame.origin.x += rightEmptyPad / 2

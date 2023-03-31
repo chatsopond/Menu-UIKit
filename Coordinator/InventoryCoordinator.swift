@@ -10,6 +10,9 @@ import UIKit
 
 /// Represents the coordinator for the inventory screen
 class InventoryCoordinator: Coordinator {
+  weak var parentCoordinator: Coordinator?
+  var onComplete: (() -> Void)?
+
   // MARK: - Dependecy Injection
   /// The inventory to be displayed
   private let inventory: Inventory
@@ -43,7 +46,13 @@ class InventoryCoordinator: Coordinator {
 
   private func showItemDetail(for item: InventoryItem) {
     let itemDetailCoordinator = InventoryItemDetailCoordinator(navigationController: navigationController, item: item)
+    itemDetailCoordinator.parentCoordinator = self
     childCoordinators.append(itemDetailCoordinator)
+    print("childCoordinators size: \(childCoordinators.count)")
     itemDetailCoordinator.start()
+    itemDetailCoordinator.onComplete = { [weak self, weak itemDetailCoordinator] in
+      guard let self, let itemDetailCoordinator else { return }
+      self.removeChildCoordinator(itemDetailCoordinator)
+    }
   }
 }

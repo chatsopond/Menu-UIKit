@@ -14,6 +14,14 @@ class ImageInventoryItemDetailCellViewModel: InventoryItemDetailCellViewModel {
     return tableView.frame.width
   }
 
+  let bottomPadding: CGFloat = 6
+
+  func heightWithBottomPadding(_ tableView: UITableView) -> CGFloat {
+    let heightTotal = (height(tableView) ?? 0) + bottomPadding
+    print("heightTotal: \(heightTotal), bottomPadding: \(bottomPadding)")
+    return heightTotal
+  }
+
   private let inventoryItem: InventoryItem
 
   init(inventoryItem: InventoryItem) {
