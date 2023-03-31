@@ -199,10 +199,10 @@
 			children = (
 				6B18F8F429CDB11C00B6435E /* Cell for Collection */,
 				6B3F1EF629D5690700CA929D /* Cell for Table */,
+				6B3F1F0A29D5B07E00CA929D /* ImageAndBackgroundView.swift */,
 				6B2CAAE229CB214C00769542 /* InventoryCollectionView.swift */,
 				6B3F1EFB29D56D8A00CA929D /* InventoryItemDetailView.swift */,
 				6B2CAB0729CC5BFF00769542 /* InventoryView.swift */,
-				6B3F1F0A29D5B07E00CA929D /* ImageAndBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 		6B2CAAE729CB252A00769542 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6B2CAAE829CB257900769542 /* InventoryViewController.swift */,
 				6B2CAB0F29CC60AE00769542 /* GradientFlowUINavigationController.swift */,
+				6B2CAAE829CB257900769542 /* InventoryViewController.swift */,
 				6B665F1E29D543380089E193 /* ItemDetailViewController.swift */,
 			);
 			path = "View Controller";
@@ -301,8 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				6B2CAB0A29CC5C2A00769542 /* Coordinator.swift */,
-				6B3F1EFD29D579B600CA929D /* InventoryItemDetailCellViewModel.swift */,
 				6B3F1F0429D58C4600CA929D /* InventoryItemDetailCell.swift */,
+				6B3F1EFD29D579B600CA929D /* InventoryItemDetailCellViewModel.swift */,
 			);
 			path = Definition;
 			sourceTree = "<group>";

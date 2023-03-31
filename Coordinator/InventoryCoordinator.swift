@@ -48,7 +48,6 @@ class InventoryCoordinator: Coordinator {
     let itemDetailCoordinator = InventoryItemDetailCoordinator(navigationController: navigationController, item: item)
     itemDetailCoordinator.parentCoordinator = self
     childCoordinators.append(itemDetailCoordinator)
-    print("childCoordinators size: \(childCoordinators.count)")
     itemDetailCoordinator.start()
     itemDetailCoordinator.onComplete = { [weak self, weak itemDetailCoordinator] in
       guard let self, let itemDetailCoordinator else { return }

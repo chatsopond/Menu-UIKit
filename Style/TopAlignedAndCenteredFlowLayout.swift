@@ -82,10 +82,6 @@ class TopAlignedAndCenteredFlowLayout: UICollectionViewFlowLayout {
     // Revise the free spacing to center items horizontally within the row.
     if let lastAttributeInFirstRow = lastAttributeInFirstRow {
       let rightEmptyPad = (collectionView.frame.width) - lastAttributeInFirstRow.frame.maxX
-      print("RightEmptyPad: \(rightEmptyPad)")
-      print("collectionView.frame.width: \(collectionView.frame.width)")
-      print("sectionInset.right: \(sectionInset.right)")
-      print("lastAttributeInFirstRow.frame.right.maxX: \(lastAttributeInFirstRow.frame.maxX)")
       if rightEmptyPad > 0 {
         for attribute in attributes {
           attribute.frame.origin.x += rightEmptyPad / 2
